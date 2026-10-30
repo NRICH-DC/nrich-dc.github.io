@@ -54,14 +54,14 @@ are not optimal for use by the public or researchers.
 presentation systems and APIs. However, discovery and reliable referencing is
 also requirements.
 
-### Levels of Complaince
+### Levels of Compliance
 
 The specification identifies 3 levels of compliance:
 
-| Level 0 | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
+| Level | Requirements |
 | ----- | ----- |
-| Level 1 | Level 0 elements plus those identified by the key words *SHOULD*,
-*SHOULD NOT* and *RECOMMENDED.* |
+| Level 0 | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
+| Level 1 | Level 0 elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
 | Level 2 | Level 1 elements plus those identified by the key word *OPTIONAL.* |
 
 ## Selection Documentation
@@ -74,17 +74,15 @@ made available online, and, for collection or item level documentation, MUST be
 linked in the metadata for the objects to which they apply.
 
 | Document  | Requirements |
-| Collection/Accession Policy – why
-and how collections and/or items are acquired | MUST be published at
-organisation level
+| ----- | ----- |
+| Collection/Accession Policy – why and how collections and/or items are acquired | MUST be published at organisation level
 SHOULD be published at a collection level
-OPTIONAL at item
-level (for special acquisitions) | | Digitisation Policy – why and how material
-is selected for digitisation | SHOULD be published at organisation levelSHOULD
-be published at a collection/project levelOPTIONAL at item level (for special
-acquisitions) | | Appraisal/Evaluation Document - why is an item/collection
-considered culturally significant, at risk and/or unique | OPTIONAL at a
-collection levelOPTIONAL at item level (for special acquisitions) |
+OPTIONAL at item level (for special acquisitions) |
+| Digitisation Policy – why and how material is selected for digitisation | SHOULD be published at organisation level
+SHOULD be published at a collection/project level
+OPTIONAL at item level (for special acquisitions) |
+| Appraisal/Evaluation Document - why is an item/collection considered culturally significant, at risk and/or unique | OPTIONAL at a collection level
+OPTIONAL at item level (for special acquisitions) |
 
 ### Recommended Reading
 The [UNESCO Recommendation Concerning the Preservation of, and Access to,
