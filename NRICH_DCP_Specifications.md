@@ -128,14 +128,9 @@ relationships to be exposed.
 
 #### Metadata about Digital Object
 
-| **DC**  | **Notes** | | :--- | :--- | | dc:source (URL)dcterms:references
-(IIIF URL)dcterms:licensedcterms:rightsHolder (OrgID or ISNI)dc:format ([MIME
-Type](http://www.iana.org/assignments/media-types/))dc:identifier (PID, local
-identifiers)dc:publisher ([ROR](https://ror.org/))dcterms:issued
-([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST
-always be present*source* links to originators native metadata record(s) for
-digital object *references* links to IIIF manifest of digital object*issued* is
-the publication date of the digital resource |
+| **DC**  | **Notes** |
+| :--- | :--- |
+| dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
 
 ### Mappings
 
@@ -145,12 +140,15 @@ These are more expressive models which may permit a more nuanced expression of
 object metadata. Whichever standards is chosen, they MUST be serialised as
 [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/) or JSON-LD for harvesting.
 
-| **Dublin Core** | **Europeana** **Data Model** **(edm:WebResource)** |
-**LinkedArt** **(abbreviated)** | | --- | --- | --- | | dc:title | dc:title |
-identified_by:      type: "Name" | | dc:description | dc:description |
-referred_to_by:       type: "LinguisticObject",      classified_as:
-type: "Type",          _label: "Description", | |  |  |  | |  |  |  | |  |  |  |
-|  |  |  | |  |  |  |
+| **Dublin Core** | **Europeana** **Data Model** **(edm:WebResource)** | **LinkedArt** **(abbreviated)** | 
+| --- | --- | --- | 
+| dc:title | dc:title | identified_by:<br>  type: "Name" |
+| dc:description | dc:description |referred_to_by:<br>  type: "LinguisticObject",<br>  classified_as:<br>    type: "Type",<br>    _label: "Description", |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 ### WikiData
 
@@ -198,10 +196,7 @@ verify compliance, with such standards, rendering them moot.
 
 ### Minimum Imaging Quality Standards
 
-These are based on the National Archives’ “[Guidance on techniques for
-digitising documents and other
-materials](https://cdn.nationalarchives.gov.uk/documents/information-management/
-digitisation-at-the-national-archives.pdf)” which provide a good balance of
+These are based on the National Archives’ “[Guidance on techniques for digitising documents and other materials](https://cdn.nationalarchives.gov.uk/documents/information-management/digitisation-at-the-national-archives.pdf)” which provide a good balance of
 detail vs practicality.
 
 - Full colour materials MUST be captured in 24-bit colour, and SHOULD use the
