@@ -27,3 +27,5 @@ However, it will address the following aspects of digitisation work flows:
   - Standardised APIs under which metadata MUST be made available as part of N-RICH
     - Mappings between metadata standards in common use and the DCP required metadata to facilitate API implementation
   - Persistent identifier recommendations to ensure robust reference, citation and attribution mechanisms       
+
+If you would like to give feedback via a form rather than raising an issue on Github, please do so [here](https://app.onlinesurveys.jisc.ac.uk/s/oxford/digitisation-capability-pilot-draft-standard-feedback). The deadline for feedback is Friday 20 November 11.59 GMT. 
