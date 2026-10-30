@@ -80,6 +80,7 @@ linked in the metadata for the objects to which they apply.
 | Appraisal/Evaluation Document<br> - why is an item/collection considered culturally significant, at risk and/or unique | OPTIONAL at a collection level<br>OPTIONAL at item level (for special acquisitions) |
 
 ### Recommended Reading
+
 The [UNESCO Recommendation Concerning the Preservation of, and Access to,
 Documentary Heritage Incl. Digital Form
 (2015)](https://unesdoc.unesco.org/ark:/48223/pf0000244675.page=5) goes into
@@ -132,7 +133,8 @@ relationships to be exposed.
 | :--- | :--- |
 | dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
 
-### Mappings
+### Mappings 
+**This section is work-in-progress**
 
 The Dublin Core fields can be mapped to equivalent fields in other
 interoperability standards, such as the Europeana Data Model and LinkedArt.
