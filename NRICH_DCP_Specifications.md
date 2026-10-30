@@ -59,6 +59,7 @@ also requirements.
 The specification identifies 3 levels of compliance:
 
 | Level 0 | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
+| ----- | ----- |
 | Level 1 | Level 0 elements plus those identified by the key words *SHOULD*,
 *SHOULD NOT* and *RECOMMENDED.* |
 | Level 2 | Level 1 elements plus those identified by the key word *OPTIONAL.* |
