@@ -75,9 +75,7 @@ linked in the metadata for the objects to which they apply.
 
 | Document  | Requirements |
 | ----- | ----- |
-| Collection/Accession Policy – why and how collections and/or items are acquired | MUST be published at organisation level
-SHOULD be published at a collection level
-OPTIONAL at item level (for special acquisitions) |
+| Collection/Accession Policy – why and how collections and/or items are acquired | MUST be published at organisation level<br>SHOULD be published at a collection level<br>OPTIONAL at item level (for special acquisitions) |
 | Digitisation Policy – why and how material is selected for digitisation | SHOULD be published at organisation level
 SHOULD be published at a collection/project level
 OPTIONAL at item level (for special acquisitions) |
