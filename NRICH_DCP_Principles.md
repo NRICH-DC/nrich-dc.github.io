@@ -140,12 +140,10 @@ addressing the newly added goals far less effectively than a dedicated standard.
 Guidelines can identify these cases and discourage the use of the offending
 versions or recommend the adoption of a more considered subset.
 
-## Ensuring standards and guidelines are practical and implementable across
-institutions with varying capacities
+## Ensuring implementability across institutions with varying capacities
 
-To some extent this question is mainly
-answered by adopting the best practices and avoiding the pitfalls described
-above, but with a couple of additional points.
+To some extent this question is mainly answered by adopting the best practices 
+and avoiding the pitfalls described above, but with a couple of additional points.
 
 - Guidelines should include case studies that clearly demonstrate the value of
 adoption to all sizes of organisation, effectively providing business cases for
@@ -169,8 +167,7 @@ to be freely available to smaller organisations. IIIF, for example has both
 commercial and open-source implementations and is supported by a consortium
 funded by larger libraries and other organisations around the world.
 
-## Ensuring national standards and guidelines remain relevant and adaptable
-over time
+## Ensuring standards and guidelines remain relevant
 
 - Guidelines should be recognised as being driven by the community that the
 guidelines are aimed at rather than imposed externally. This not only provides
