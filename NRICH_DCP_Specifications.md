@@ -123,7 +123,7 @@ relationships to be exposed.
 
 | **DC**  | **Notes** | 
 | :--- | :--- |
-| dc:title<br>dc:descriptiondc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7)),br>dc:related (URL)<br>dc:creator<dc>dc:contributor<dc>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dcterms:provenance (URL) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for physical object<br><br>*created* is the creation date of the physical object<br><br>*provenance* links to accession policy and/or accession details |
+| dc:title<br>dc:description<br>dc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7))<br>dc:related (URL)<br>dc:creator<dc>dc:contributor<dc>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dcterms:provenance (URL) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for physical object<br><br>*created* is the creation date of the physical object<br><br>*provenance* links to accession policy and/or accession details |
 | dc:subject ([LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html))<br>dcterms:spatial ([ISO 6709](https://en.wikipedia.org/wiki/ISO_6709), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html))<br>dcterms:temporal ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dc:language* ([RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html)) | *subject* is OPTIONAL<br><br>**Maps MUST specify *spatial* coverage<br><br>Text bearing materials MUST specify *language* |
 
 #### Metadata about Digital Object
