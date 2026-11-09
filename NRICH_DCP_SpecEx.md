@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This document provides a verabal overview of the specifications more formally 
-defined below. It includes more explanatory details, providing the reasoning 
-behind decisions made in drafting the specfications, identifying where 
+This document provides a verbal overview of the specifications. It includes 
+more explanatory details than the formal specification, providing the reasoning 
+behind decisions made in drafting the specifications, identifying where 
 feedback from the community has been incorporated.   
 
 These standards and guidelines are the outcome of the N-RICH Digitisation
@@ -21,6 +21,8 @@ to cover expansions in scope. To avoid reinventing the wheel, existing widely
 used approaches are chosen where possible. Many standards overlap, and where a
 choice has been made, it favours simplicity and flexibility for the pragmatic 
 reason that such standards are easier to validate and map to other approaches.
+
+In particular, the 
 
 ### Audience
 This document is intended primarily for collection holders digitising material
