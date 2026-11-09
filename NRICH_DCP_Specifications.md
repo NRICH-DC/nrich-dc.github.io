@@ -6,17 +6,16 @@ These standards and guidelines are the outcome of the N-RICH Digitisation
 Capabilities Pilot and target cultural heritage digitisation resulting in 2D
 image artefacts and the associated metadata. Taking inspiration from the IMPULSE
 Consortium’s  [Deliverable D3.4: Guidelines on simplification of metadata based
-on open standards](https://zenodo.org/records/18301994) the objective is to
+on open standards](https://zenodo.org/records/18301994), the objective is to
 stablish a “minimum viable set” of standards and guidelines which should allow
 the construction of a federated research infrastructure.
 
-This recommendation attempts to define a “minimum viable set” of standards and
-guidelines that balances useful interoperability, practical implementability
-for a wide range of organisation and extensibility to cover expansions in scope.
-To avoid reinventing the wheel, existing widely used approaches are chosen
-where possible. Many standards overlap, and where a choice has been made, it
-favours simplicity and flexibility for the pragmatic reason that such standards
-are easier to validate and map to other approaches.
+This “minimum viable set” tries to balance useful interoperability and practical
+implementability for a wide range of organisation, and include extensibility 
+to cover expansions in scope. To avoid reinventing the wheel, existing widely 
+used approaches are chosen where possible. Many standards overlap, and where a
+choice has been made, it favours simplicity and flexibility for the pragmatic 
+reason that such standards are easier to validate and map to other approaches.
 
 ### Audience
 This document is intended primarily for collection holders digitising material
@@ -60,9 +59,9 @@ The specification identifies 3 levels of compliance:
 
 | Level | Requirements |
 | ----- | ----- |
-| Level 0 | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
-| Level 1 | Level 0 elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
-| Level 2 | Level 1 elements plus those identified by the key word *OPTIONAL.* |
+| Baseline | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
+| Extended  | Level 0 elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
+| Aspirational | Level 1 elements plus those identified by the key word *OPTIONAL.* |
 
 ## Selection Documentation
 
