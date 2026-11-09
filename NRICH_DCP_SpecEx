@@ -1,4 +1,4 @@
-# N-RICH Digitisation Capabilities Prototype - Specifications (Explanatory)
+# N-RICH Digitisation Capabilities Prototype - Explanatory Notes
 
 ## Introduction
 
@@ -56,11 +56,11 @@ also requirements.
 
 The specification identifies 3 levels of compliance:
 
-| Level | Requirements |
+| Level | Description |
 | ----- | ----- |
-| Basrline | Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
-| Extended | Level 0 elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
-| Aspirational | Level 1 elements plus those identified by the key word *OPTIONAL.* |
+| Baseline | These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
+| Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
+| Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Incorporating such information **at source** would greatly improve its accessibility to future users   |
 
 ## Selection Documentation
 
