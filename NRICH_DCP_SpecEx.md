@@ -12,7 +12,7 @@ Capabilities Pilot and target cultural heritage digitisation resulting in 2D
 image artefacts and the associated metadata. Taking inspiration from the IMPULSE
 Consortium’s  [Deliverable D3.4: Guidelines on simplification of metadata based
 on open standards](https://zenodo.org/records/18301994), the objective is to
-stablish a “minimum viable set” of standards and guidelines which should allow
+establish a “minimum viable set” of standards and guidelines which should allow
 the construction of a federated research infrastructure.
 
 This “minimum viable set” tries to balance useful interoperability and practical
