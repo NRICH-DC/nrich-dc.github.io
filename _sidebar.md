@@ -1,5 +1,6 @@
 - [Overview of Project](README.md)
 - [Objectives](NRICH_DCP_Objectives.md)
 - [Design Principles](NRICH_DCP_Principles.md)
-- [Specifications](NRICH_DCP_Specifications.md)
+- [Specifications (Explanatory)](NRICH_DCP_SpecEx.md)
+- [Specifications (Formal)](NRICH_DCP_Specifications.md)
   - [Introduction](NRICH_DCP_Specifications.md?id=introduction)
