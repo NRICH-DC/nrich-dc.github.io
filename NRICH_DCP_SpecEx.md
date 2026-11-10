@@ -57,13 +57,13 @@ also requirements.
 The [FAIR principles]() encapsulate researchers’ broad requirements with respect to data:
 
 - **Findable** – Metadata specifications should:
-  - Allow the construction of a discovery service what will allow a researcher to find the object that they require'
-  - Provide enough detail about the identity of the object to enable a researcher its authenticity and suitability for their needs'
-  - Be sufficiently generic to apply across the wide variety cultural heritage objects, so that no specific materials are privileged in terms of discovery'  
+  - Allow the construction of a discovery service what will allow a researcher to find the object that they require
+  - Provide enough detail about the identity of the object to enable a researcher its authenticity and suitability for their needs
+  - Be sufficiently generic to apply across the wide variety cultural heritage objects, so that no specific materials are privileged in terms of discovery  
 
 - **Accessible** – The mechanisms for accessing both data (images) and metadata should:
-  - Be suitable for both human and machine consumption without undue technical or policy barriers.
-  - Be compliant with [UKRI Policy on Research Data](): "As open as possible, as closed as necessary"
+  - Be suitable for both human and machine consumption without undue technical or policy barriers
+  - Be compliant with [UKRI Policy on Research Data](): "As open as possible, as closed as necessary
   - A route to more detailed information (e.g. collection specific metadata) should be clearly signposted.
 
 - **Interoperable** – as much as possible, common ontologies, terminologies and authorities should be used between collections. Mechanisms for access and retrieval should be standardised for any particular type of material or data.
