@@ -22,8 +22,6 @@ used approaches are chosen where possible. Many standards overlap, and where a
 choice has been made, it favours simplicity and flexibility for the pragmatic 
 reason that such standards are easier to validate and map to other approaches.
 
-In particular, the 
-
 ### Audience
 This document is intended primarily for collection holders digitising material
 for inclusion in N-RICH. However, it is also of informative for those
@@ -54,6 +52,10 @@ are not optimal for use by the public or researchers.
 presentation systems and APIs. However, discovery and reliable referencing is
 also requirements.
 
+### FAIR Data
+
+### CARE Principles
+
 ### Levels of Compliance
 
 The specification identifies 3 levels of compliance:
@@ -62,7 +64,7 @@ The specification identifies 3 levels of compliance:
 | ----- | ----- |
 | Baseline | These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
 | Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
-| Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Incorporating such information **at source** would greatly improve its accessibility to future users   |
+| Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
 
 ## Selection Documentation
 
