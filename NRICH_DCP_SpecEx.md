@@ -63,10 +63,18 @@ The [FAIR principles]() encapsulate researchers’ broad requirements with respe
 
 - **Accessible** – The mechanisms for accessing both data (images) and metadata should:
   - Be suitable for both human and machine consumption without undue technical or policy barriers
-  - Be compliant with [UKRI Policy on Research Data](): "As open as possible, as closed as necessary
+  - Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
   - A route to more detailed information (e.g. collection specific metadata) should be clearly signposted.
 
-- **Interoperable** – as much as possible, common ontologies, terminologies and authorities should be used between collections. Mechanisms for access and retrieval should be standardised for any particular type of material or data.
+- **Interoperable** – This specification identifies the following common API's, ontologies, terminologies and authorities for interoperability between collections:
+  - [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1, level 1 for machine access to 2D images
+    - IIIF is widely supported by both commercial and open-source image delivery platforms
+    - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
+    - IIIF supports complex objects such as books and newspapers, large objects displayed using tiled images such as maps and scrolls and alternate views to support features such as foldouts and two-page spreads
+    - IIIF integrates with a wide variety of research tools such as Optical Character Recognition (OCR), Handwritten Text Recognition (HTR), crowdsourcing platforms such as Zooniverse, Web Annotation (by humans and machines) and image analytics (AI or otherwise)
+  - OAI-PMH
+  - Dublin CORE, Europeana Data Model or LinkedART can all be used to express the metadata requirements, with mappings to SPECTRUM
+  - Wikidata references recommended for key entities such as peoples, places and events since Wikidata acts as a resolver for related entries in many other sources     
 
 - **Reusable** – data and metadata should be preserved for long term access, and provide Persistent Identifiers (PIDs) to ensure ongoing citability. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
 
