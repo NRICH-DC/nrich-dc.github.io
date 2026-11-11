@@ -40,7 +40,7 @@ as skills and technology evolve.
 - **Preservation** concerns the long-term availability of the digitised object (to avoid having to re-digitise). Often file formats suitable for preservation are not optimal for use by the public or researchers.
 - **Access** needs to consider both human and machine consumption which requires both presentation systems and APIs. However, discovery and reliable referencing is also requirements.
 
-### FAIR Principles
+## FAIR Principles
 
 The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
 
@@ -52,6 +52,7 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
 - **Accessible** – The mechanisms for accessing both data (images) and metadata will:
   - Be suitable for both human and machine consumption without undue technical or policy barriers
   - Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
+    - Most importantly, metadata should be available under a license that is compliant with the policy   
   - Provide a human- and machine-actionable mechanism to access more detailed information (e.g. collection specific metadata, source records etc.).
 
 - **Interoperable** – This specification identifies the following standards for interoperability between collections:
@@ -68,14 +69,16 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
     - A mapping is also provided for SPECTRUM since it used within many museum collection management systems, although not as a metadata transfer format. 
   - Wikidata references are recommended for key entities such as peoples, organisations, places and events since Wikidata acts as a resolver for related entries in many other sources     
 
-- **Reusable** – Data and metadata should available for researchers in the longer term
-  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
+- **Reusable** – Data and metadata should available for researchers in the longer term for both new research and reproducibility purposes. The specification 
+  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. Data DOIs and ARKs
+  - Digital materials (both data and metadata) should be archived in a certified archiving service. The specification recommends  
+  - As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
 
+## CARE Principles
 
-### CARE Principles
+The [CARE Principles](https://www.gida-global.org/careprinciples) outlines specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for may be a consideration outline consideration of **Collective Benefit, Authority to Control, Responsibility** and **Ethics**
 
-
-### Levels of Compliance
+## Levels of Compliance
 
 The specification identifies 3 levels of compliance:
 
