@@ -147,7 +147,7 @@ Cultural heritage materials are enormously diverse so the common attributes that
 
 ### Standard
 
-Iterms marked with an asterisk may occur more than once in a metadata record.
+Items marked with an asterisk may occur more than once in a metadata record. 
 
 #### Baseline
 - Required metadata about the Physical Object
@@ -155,29 +155,31 @@ Iterms marked with an asterisk may occur more than once in a metadata record.
   - *description*: Longer more descriptive text
   - *type*: an indication of the type of physical object being described (e.g. statue)
   - *related\**: URL link(s) to the native metadata record(s) for the physical object, if they exist, May also link to appraisal documentation if it exists. 
-  - *creator\**: name of person, group or organisation who created the object 
-  - *contributor\**: name of person, group or organisation who contributed indirectly to the creation of the object
+  - *creator\**: name of person, group or organisation who created the object ("anonymous" or "unknown" are acceptable values)
+  - *contributor\**: name of person, group or organisation who contributed indirectly to the creation of the object. May be omitted if not relevant. 
   - *created*: the date that the object was created, expressing any uncertainty 
   - *provenance*: URL link to accession documentation
   - *spatial coverage*: geographical area to which the object refers (only required for maps or similar objects) 
   - *language\**: languages and/or scripts used (only required for text-bearing objects) 
 - Required metadata about the Digital Object
-  - source
-  - references
-  - license
-  - rights holder
-  - format
-  - identifer
-  - publisher
-  - issued 
+  - *source\**: URL links to native metadata record(s) for digital object, if they exist. May also link to digitisation documentation if it exists.
+  - *references\**: URL link(s) to digitised object(s) 
+  - *license\**: license for the digitised object and its associated metadata record, which must be compliant with UKRI research data policy as described above
+  - *rights holder*: name of the owner of the rights to the digitised object
+  - *format*: description of file format of the digitised object
+  - *identifer\*: one or more persistent identifiers for the object, and any local identifiers  
+  - *publisher*: name of the organisation originally publishing the metadata record and digitised object
+  - *issued*: date that the metadata record and digtised object were published  
+#### Extended
+- Baseline requirements plus the following qualifications...
+- Required metadata about the Physical Object
+  - *creator\**: must reference a recognised identity resource such as a Wikidata URL (as mentioned above) or an [ISNI](https://isni.org/) reference URL  
+  - *contributor\**: as with *creator*
+  - *created*: must use [ISO8601](https://www.iso.org/standard/70908.html) standard date format but can use Extended Date-Time Format (EDTF) to express uncertainty
+  - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709)(geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)(country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
+  - *language*: must use one 
 
 
-Where such additional information exists online, it SHOULD be linked in
-the metadata for the objects to which it applies.
-
-Standardised formats or controlled vocabularies
-SHOULD be used in preference to plaintext where this is indicated in
-parentheses.
 
 #### Metadata about the Physical Object
 
