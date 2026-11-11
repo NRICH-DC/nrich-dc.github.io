@@ -34,25 +34,13 @@ in the [Review of Standards and Guidelines](link required).  This is deliberatel
 expansive specification and the expectation is that this will extend over time
 as skills and technology evolve.
 
-- **Selection** is concerned with identifying objects as in-scope (i.e. cultural
-heritage), then making a series of evaluation and selection decisions: to
-determine whether they are accessioned into a physical collection, and
-subsequently, to determine priority for downstream actions such as conservation
-or digitisation. 
-- **Metadata** focuses on metadata creation to go alongside the digitised artefact.
-This includes descriptive information about the underlying physical artefect and
-technical information but, also links to related objects and rights related
-information.
-- **Imaging** is largely a technical activity and thus amenable to setting and
-measuring quality standards.
-- **Preservation** concerns the long-term availability of the digitised object
-(to avoid having to re-digitise). Often file formats suitable for preservation
-are not optimal for use by the public or researchers.
-- **Access** needs to consider both human and machine consumption which requires both
-presentation systems and APIs. However, discovery and reliable referencing is
-also requirements.
+- **Selection** is concerned with identifying objects as in-scope (i.e. cultural heritage), then making a series of evaluation and selection decisions: to determine whether they are accessioned into a physical collection, and subsequently, to determine priority for downstream actions such as conservation or digitisation. 
+- **Metadata** focuses on metadata creation to go alongside the digitised artefact. This includes descriptive information about the underlying physical artefect and technical information but, also links to related objects and rights related information.
+- **Imaging** is largely a technical activity and thus amenable to setting and measuring quality standards.
+- **Preservation** concerns the long-term availability of the digitised object (to avoid having to re-digitise). Often file formats suitable for preservation are not optimal for use by the public or researchers.
+- **Access** needs to consider both human and machine consumption which requires both presentation systems and APIs. However, discovery and reliable referencing is also requirements.
 
-### FAIR Data
+### FAIR Principles
 
 The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
 
@@ -81,10 +69,11 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
   - Wikidata references are recommended for key entities such as peoples, organisations, places and events since Wikidata acts as a resolver for related entries in many other sources     
 
 - **Reusable** – Data and metadata should available for researchers in the longer term
-  - To ensure that references and citations continue to Persistent Identifiers (PIDs). As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
+  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
 
 
 ### CARE Principles
+
 
 ### Levels of Compliance
 
@@ -96,14 +85,16 @@ The specification identifies 3 levels of compliance:
 | Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
 | Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
 
-## Selection Documentation
+## Selection
 
-Transparency around how and why selections decisions have been made is essential
+### Standard
+
+Transparency around how and why selection decisions have been made is essential
 so that the researchers and the public can understand gap between what is
-available and what exists (or exist*ed*). This information is made available in
-the documents outlined in the table below. When a document exists, it MUST be
-made available online, and, for collection or item level documentation, MUST be
-linked in the metadata for the objects to which they apply.
+available digitally, and what actually exists (or exist*ed*). This information 
+is made available in the documents outlined in the table below. When a document 
+exists, it MUST be made available online, and, for collection or item level 
+documentation, MUST be linked in the metadata for the objects to which they apply.
 
 | Document  | Requirements |
 | ----- | ----- |
@@ -111,7 +102,7 @@ linked in the metadata for the objects to which they apply.
 | Digitisation Policy<br> – why and how material is selected for digitisation | SHOULD be published at organisation level<br>SHOULD be published at a collection/project level<br>OPTIONAL at item level (for special acquisitions) |
 | Appraisal/Evaluation Document<br> - why is an item/collection considered culturally significant, at risk and/or unique | OPTIONAL at a collection level<br>OPTIONAL at item level (for special acquisitions) |
 
-### Recommended Reading
+### Guidelines
 
 The [UNESCO Recommendation Concerning the Preservation of, and Access to,
 Documentary Heritage Incl. Digital Form
