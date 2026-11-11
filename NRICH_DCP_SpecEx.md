@@ -66,7 +66,7 @@ The [FAIR principles]() encapsulate researchers’ broad requirements with respe
   - Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
   - Provide a human- and machine-actionable mechanism to access more detailed information (e.g. collection specific metadata, source records etc.).
 
-- **Interoperable** – This specification identifies the following common API's, ontologies, terminologies and authorities for interoperability between collections:
+- **Interoperable** – This specification identifies the following standards for interoperability between collections:
   - [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1+, level 1+ for machine access to 2D images
     - IIIF is widely supported by both commercial and open-source image delivery platforms
     - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
@@ -80,7 +80,8 @@ The [FAIR principles]() encapsulate researchers’ broad requirements with respe
     - A mapping is also provided for SPECTRUM since it used within many museum collection management systems, although not as a metadata transfer format. 
   - Wikidata references are recommended for key entities such as peoples, organisations, places and events since Wikidata acts as a resolver for related entries in many other sources     
 
-- **Reusable** – Data and metadata should be preserved for long term access, and provide Persistent Identifiers (PIDs) to ensure ongoing citability. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
+- **Reusable** – Data and metadata should available for researchers in the longer term
+  - To ensure that references and citations continue to Persistent Identifiers (PIDs). As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
 
 
 ### CARE Principles
