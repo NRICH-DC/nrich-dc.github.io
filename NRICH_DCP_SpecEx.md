@@ -147,18 +147,29 @@ Cultural heritage materials are enormously diverse so the common attributes that
 
 ### Standard
 
+Iterms marked with an asterisk may occur more than once in a metadata record.
+
 #### Baseline
-- title:
-- description
-- type
-- related
-- creator
-- contributor
-- provenance
-- subject
-- spatial coverage
-- temporal coverage
-- language
+- Required metadata about the Physical Object
+  - *title*: Short text identifying the object as uniquely as possible 
+  - *description*: Longer more descriptive text
+  - *type: an indication of the type of physical object being described (e.g. statue)
+  - *related\**: URL link(s) to the native metadata record(s) for the physical object, if they exist, May also link to appraisal documentation if it exists. 
+  - *creator\**: name of person, group or organisation who created the object 
+  - *contributor\**: name of person, group or organisation who contributed indirectly to the creation of the object
+  - *created*: the date that the object was created, expressing any uncertainty 
+  - *provenance*: URL link to accession documentation
+  - *spatial coverage*: geographical area to which the object refers (only required for maps or similar objects) 
+  - *language\*: languages and/or scripts used (only required for text-bearing objects) 
+- Required metadata about the Digital Object
+  - source
+  - references
+  - license
+  - rights holder
+  - format
+  - identifer
+  - publisher
+  - issued 
 
 
 Where such additional information exists online, it SHOULD be linked in
