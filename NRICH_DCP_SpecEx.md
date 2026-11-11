@@ -90,8 +90,11 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
 The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for.
 
 **Collective Benefit** Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
+
 **Authority to Control** Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
+
 **Responsibility** Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
+
 **Ethics** Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
 
 The CARE Principles come to the fore when making selection decisions and through the crafting of metadata that reflects indigenous concerns. When CARE considerations are a factor, these must be addressed in an object or collection level appraisal of the item and released as part of the object metadata. The use of Wikidata to map between indigenous and conventional representations of place, events and peoples can also be useful in this context.   
@@ -100,12 +103,28 @@ The CARE Principles come to the fore when making selection decisions and through
 
 ### Standard
 
-Transparency around how and why selection decisions have been made is essential
-so that the researchers and the public can understand gap between what is
-available digitally, and what actually exists (or exist*ed*). This information 
-is made available in the documents outlined in the table below. When a document 
-exists, it MUST be made available online, and, for collection or item level 
-documentation, MUST be linked in the metadata for the objects to which they apply.
+Transparency around how and why selection decisions have been made is essential so that the researchers and the public can understand gap between what is available digitally, and what actually exists (or exist*ed*). The specification identifies key three selection events about which documentary information can be required. These may be high level policies or, for specific projects or cases, more descriptive documents. Each may be published at an organisational, collection or item level.  
+1. Accession - why and how collections and/or items are acquired
+2. Digitisation - why and how material is selected for digitisation
+3. Appraisal - why an item/collection is considered culturally significant, at risk and/or unique. This may include CARE considerations if applicable.  
+Item level
+
+#### Baseline
+
+- Organisational accession policy must be published
+- If collection or item level documents exist
+  - They must be published
+  - They must be referenced in the metadata of the objects to which they apply    
+
+#### Extended
+
+- Baseline requirements plus...
+- Collections level policies must be published for all collections
+- Digitisation policies must be published at either an organisational or collection/project level  
+
+#### Aspirational
+- Extended requirements plus...
+- Appraisal documentation must be available at collection or item level
 
 | Document  | Requirements |
 | ----- | ----- |
@@ -121,6 +140,7 @@ Documentary Heritage Incl. Digital Form
 considerable detail on good practice for selection processes and the
 accompanying documentation.
 
+The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials.
 ## Metadata
 
 This section focuses on object metadata that is made available to researchers
