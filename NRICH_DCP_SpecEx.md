@@ -143,11 +143,11 @@ This section focuses on object metadata that is made available to researchers an
 
 Organisations are likely to keep additional metadata or documentation information depending on curatorial capabilities or their internal process needs. This specification avoids making a distinction between the physical object and more abstract bibliographic entities such as [Works and Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. If required, the ability to link to more detailed metadata allows these types of relationships to be exposed.
 
-Cultural heritage materials are enormously diverse so the common attributes that can be used to construct generic interfaces for services such as discovery is somewhat limited. This specification is based on [Dublin Core](https://www.dublincore.org/specifications/) Elements with some additions from the more specific DC Terms.  Note that some fields specifically refer to attributes of the physical object being digitised which are inherited by the digital object, while others are unique to the digital object.
+Cultural heritage materials are enormously diverse so the common attributes that can be used to construct generic interfaces for services such as discovery is somewhat limited. The baseline specification is based on [Dublin Core](https://www.dublincore.org/specifications/) Elements with some additions from the more specific DC Terms.  Note that some fields specifically refer to attributes of the physical object being digitised which are inherited by the digital object, while others are unique to the digital object.
 
 ### Standard
 
-Items marked with an asterisk may occur more than once in a metadata record. 
+Items marked with an asterisk may occur more than once in a metadata record. The specification allows metadata to be expressed in one of three formats: Dublin Core, Europeana Data Model (EDM) and LinkedArt to give collection holders flexibility when publishing their data. Each of the three formats are expressible as [Linked-Data](https://www.w3.org/DesignIssues/LinkedData) which allows data from multiple sources to be integrated into complex "knowledge graphs" that open the way to a variety of discovery, navigation and analytical approaches. *Baseline* and *extended* requirements can be accommodated within all three formats but *aspirational* requirements make use of advanced event-based features that only EDM and LinkedArt support.  
 
 #### Baseline
 - Required metadata about the Physical Object
@@ -163,7 +163,7 @@ Items marked with an asterisk may occur more than once in a metadata record.
   - *language\**: languages and/or scripts used (only required for text-bearing objects) 
 - Required metadata about the Digital Object
   - *source\**: URL links to native metadata record(s) for digital object, if they exist. May also link to digitisation documentation if it exists.
-  - *references\**: URL link(s) to digitised object(s) 
+  - *references\**: URL link(s) to digitised object(s) if available
   - *license\**: license for the digitised object and its associated metadata record, which must be compliant with UKRI research data policy as described above
   - *rights holder*: name of the owner of the rights to the digitised object
   - *format*: description of file format of the digitised object
@@ -177,39 +177,14 @@ Items marked with an asterisk may occur more than once in a metadata record.
   - *contributor\**: as with *creator*
   - *created*: must use [ISO8601](https://www.iso.org/standard/70908.html) standard date format but can use Extended Date-Time Format (EDTF) to express uncertainty
   - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709)(geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)(country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
-  - *language*: must use one 
-
-
-
-#### Metadata about the Physical Object
-
-| **DC**  | **Notes** | 
-| :--- | :--- |
-| dc:title<br>dc:description<br>dc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7))<br>dc:related (URL)<br>dc:creator<br>dc:contributor<br>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dcterms:provenance (URL) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for physical object<br><br>*created* is the creation date of the physical object<br><br>*provenance* links to accession policy and/or accession details |
-| dc:subject ([LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html))<br>dcterms:spatial ([ISO 6709](https://en.wikipedia.org/wiki/ISO_6709), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html))<br>dcterms:temporal ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dc:language* ([RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html)) | *subject* is OPTIONAL<br><br>**Maps MUST specify *spatial* coverage<br><br>Text bearing materials MUST specify *language* |
-
-#### Metadata about Digital Object
-
-| **DC**  | **Notes** |
-| :--- | :--- |
-| dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
-
-### WikiData
-
-Amongst other functions,
-[Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) provides useful
-resource for the identification and disambiguation of people and places. While
-it is not the authoritative source for information on these entities, it links
-to multiple sources which are. Therefore, for person and named place references,
-metadata SHOULD use links to WikiData references rather than specific sources,
-where they exist.
+  - *language\**: must use one of 
 
 ### Guidelines
 
-- Some objects might only be described at an aggregate level (e.g. boxes of material). This can be readily accommodated since a record can link to multiple digtised objects.
+- Some objects might only be described at an aggregate level (e.g. boxes of material). This can be readily accommodated since a record can link to multiple digitised objects (*references*).
 
-- Some objects, for various reasons, may not be available online, but it is still possible to publish a useful metadata record that records the existence of the object and document how it can be accessed. This can apply to both undigitised items and items that cannot be made available for legal or other reasons.
-  - Resources such [Early Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the significant research value of a suitably structured catalogue even in the absence of digitised surrogates.
+- Some objects, may not be able to be made available online for GDPR, CARE sensitivity or other cultural or legal reasons. It is still possible to publish a useful metadata record that records the existence of the object and document how it can be accessed. In this case there may be no *references* in the metadata record. This can also apply to undigitised items.
+  - Resources such [Early Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the significant research value of a suitably structured metadata catalogue even in the absence of digitised surrogates.
 
 It is expected that organisations will be able to accommodate the required
 metadata within the systems and schemas that they already use. Formats are
@@ -221,90 +196,57 @@ detail in the Access section.
 
 ## Imaging
 
-This section focuses on minimum quality guidelines for 2D imaging
-materials. While it is possible to go into considerable detail on quality
-standards, many organisations will lack the technical capacity to conform to, or
-verify compliance, with such standards, rendering them moot.
+This section focuses on minimum quality guidelines for 2D imaging materials. While it is possible to go into considerable detail on quality standards, many organisations will lack the technical capacity to conform to, or verify compliance, with such standards, rendering them moot.
 
 ### Standard
 
-The specification aims for a complete image of an object to be at least 4.5 megapixels in resolution, which is within the reach of almost all digital and phone cameras currently available. For comparison, a typical monitor is around 2-4 megapixels so it allows a modest amount of zooming in for more detail. For objects with high levels of detail, it makes sense to capture more detailed images, perhaps using image stitching software or in-camera panorama features to combine multiple images. IIIF viewers provide the ability to zoom and pan across larger images automatically.
+#### Baseline
+\zA
+- The specification aims for a complete image of an object to be a minimum of 4.5 megapixels in resolution. This is within the reach of almost all digital and phone cameras currently available. A typical image is more likely to be 10-18 meagpixels. For comparison, a typical monitor is around 2-4 megapixels so it allows a modest amount of zooming in for more detail.
+- For objects with high levels of detail, it makes sense to capture more detailed images, perhaps using image stitching software or in-camera panorama features to combine multiple images. IIIF viewers provide the ability to zoom and pan across larger images automatically.
+- Colour objects should be captured using 24-bit colour (8-bits per colour channel) which is standard for most cameras.
+- Monochrome sources such as microfilm may be captured using 8-bit greyscale.
+- Objects must span at least 90% of the final image in one direction (to allow for long, thin objects) but they should not extend right to the edge of the image so viewers can be sure that no part of the object is cut off.
+- Objects should be photographed against a uniform, neutral background that contrasts with the object so that its edges can be clearly identified.
 
-Objects should occupy span at least 90% of an image in one direction but it should not go right to the edge of the image so viewers can be sure that no part of the object is cut off. A long, thin object should 
+### Guidelines
 
-These are based on the National Archives’ “[Guidance on techniques for digitising documents and other materials](https://cdn.nationalarchives.gov.uk/documents/information-management/digitisation-at-the-national-archives.pdf)” which provide a good balance of detail vs practicality.
-
- 
-
-- Full colour materials MUST be captured in 24-bit colour, and SHOULD use the
-[Enumerated sRGB](https://webstore.iec.ch/en/publication/6169) colourspace
-profile
-
-- Microfilm and other monochrome material may OPTIONALLY be captured in  8-bit
-grayscale using the Enumerated greyscale colourspace profile
-
-- Material between A5 and A3 in size MUST be captured at a minimum of 300 DPI,
-giving images between 4.5 and 17.5 megapixels
-
-- Smaller objects MUST be imaged at an appropriately higher resolution to give a
-similar final image size, e.g.:
-
-  - 6x4 inch photographs at a minimum of 600 DPI
-
-  - 35mm transparencies at a minimum 4000 DPI
-
-- For documents imaged on film, images SHOULD correspond to resolution
-equivalent to at least 300 DPI for the original document
-
-- For larger objects, correspondingly, lower resolution imaging is permissible
-although high levels of detail in a large object may warrant higher resolution
-imaging.
-
-- All images MUST have a sufficient clear border/margin to demonstrate to users
-that the entire item has been captured. Images MUST be captured against a
-neutral background that makes this easily discernable.
-
-- If a single image cannot capture an object in its entirety, there MUST be
-sufficient overlap between adjacent images (>10%) to allow images to be stitched
-together programatically.
-
-### Recommended Reading
-The National Archives’ Guidance document not only defines quality standards but
-provides useful guidance for a complete digitisation workflow, including
-handling guidance, metadata, and code recipes to create conformant [JPEG
-2000](https://www.iso.org/standard/87632.html) files and validate them.
+These specifications are based on the National Archives’ “[Guidance on techniques for digitising documents and other materials](https://cdn.nationalarchives.gov.uk/documents/information-management/digitisation-at-the-national-archives.pdf)” which provide a good balance of detail vs practicality. The  Guidance document not only defines quality standards but provides useful guidance for a complete digitisation workflow, including handling guidance, metadata, and code recipes to create conformant [JPEG 2000](https://www.iso.org/standard/87632.html) files and validate them.
 
 ## Preservation
-The specification leverages existing digital preservation practice
-and certification rather than creating additional requirements.
 
-- Materials SHOULD be archived in a
-[CoreTrustSeal](https://www.coretrustseal.org/) certified repository or service.
+The specification leverages existing digital preservation practice and certification rather than creating additional requirements. 
 
-- Digitised material SHOULD be archived in a format that is suitable for
-long-term preservation. For 2D imaged materials,
-[TIFF](https://www.iso.org/standard/34342.html) or uncompressed JPEG2000 are
-acceptable formats.
+### Standard
 
-- Metadata SHOULD be stored alongside image data in the native format used by
-the originating organisation. Archiving an additional version of the metadata
-formatted for compliance with N-RICH is OPTIONAL.
+#### Baseline
+
+Preservation is not a *baseline* requirement
+
+#### Extended
+
+- Materials must be archived in a [CoreTrustSeal](https://www.coretrustseal.org/) certified repository or service.
+- Digitised material must be archived in a format that is suitable for long-term preservation. For 2D imaged materials, [TIFF](https://www.iso.org/standard/34342.html) or uncompressed JPEG2000 are acceptable formats.
+- Metadata must be stored alongside image data in the native format used by the originating organisation.
+
+#### Aspirational
+
+Archiving an additional version of the metadata formatted for compliance with N-RICH.
+
+### Guidelines
+
+The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a good introduction to digital preservation theory and practice. 
 
 ## Access
 
-### Document Formats
+### Standard
 
-N-RICH compliant documentation such as selection policies MUST use one of the
-following file formats:
+#### Baseline
 
-- PDF/A: Specifically, PDF/A-1 ([ISO
-19005-1](https://www.iso.org/standard/38920.html)) or PDF/A-2 ([ISO
-19005-2](https://www.iso.org/standard/50655.html))
-
+N-RICH compliant documentation such as selection policies MUST use one of the following file formats:
+- PDF/A: Specifically, PDF/A-1 ([ISO 19005-1](https://www.iso.org/standard/38920.html)) or PDF/A-2 ([ISO 19005-2](https://www.iso.org/standard/50655.html))
 - [UTF-8 plaintext](https://www.w3schools.com/charsets/ref_html_utf8.asp)
-
 - [Markdown](https://www.markdownguide.org/)
-
 - [TeX](https://en.wikipedia.org/wiki/TeX)
 
 ### Persistent Identifiers
