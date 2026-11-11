@@ -54,29 +54,33 @@ also requirements.
 
 ### FAIR Data
 
-The [FAIR principles]() encapsulate researchers’ broad requirements with respect to data:
+The [FAIR principles]() encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
 
-- **Findable** – Metadata specifications should:
+- **Findable** – Metadata specifications will:
   - Allow the construction of a discovery service what will allow a researcher to find the object that they require
   - Provide enough detail about the identity of the object to enable a researcher its authenticity and suitability for their needs
   - Be sufficiently generic to apply across the wide variety cultural heritage objects, so that no specific materials are privileged in terms of discovery  
 
-- **Accessible** – The mechanisms for accessing both data (images) and metadata should:
+- **Accessible** – The mechanisms for accessing both data (images) and metadata will:
   - Be suitable for both human and machine consumption without undue technical or policy barriers
   - Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
-  - A route to more detailed information (e.g. collection specific metadata) should be clearly signposted.
+  - Provide a human- and machine-actionable mechanism to access more detailed information (e.g. collection specific metadata, source records etc.).
 
 - **Interoperable** – This specification identifies the following common API's, ontologies, terminologies and authorities for interoperability between collections:
-  - [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1, level 1 for machine access to 2D images
+  - [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1+, level 1+ for machine access to 2D images
     - IIIF is widely supported by both commercial and open-source image delivery platforms
     - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
     - IIIF supports complex objects such as books and newspapers, large objects displayed using tiled images such as maps and scrolls and alternate views to support features such as foldouts and two-page spreads
     - IIIF integrates with a wide variety of research tools such as Optical Character Recognition (OCR), Handwritten Text Recognition (HTR), crowdsourcing platforms such as Zooniverse, Web Annotation (by humans and machines) and image analytics (AI or otherwise)
-  - OAI-PMH
-  - Dublin CORE, Europeana Data Model or LinkedART can all be used to express the metadata requirements, with mappings to SPECTRUM
-  - Wikidata references recommended for key entities such as peoples, places and events since Wikidata acts as a resolver for related entries in many other sources     
+  - OAI-PMH for harvesting of metadata
+  - Metadata requirements can be met using several formats
+    - Dublin CORE is the simplest and most common metadata format but has limited expressiveness for information beyond the *baseline* requirements
+    - Europeana Data Model already used by a number of collections and systems to feed metadata into Europeana. It has a stronger cultural heritage focus and therefore can accommodate *extended* or *aspirational* metadata.
+    - LinkedART is a subset of the CIDOC-CRM (developed by the International Council of Museums). While the CRM is very expansive and can be daunting to implementers, LinkedARt is rather simpler and aligns with the N-RICH infrastructure prototype requirements. It can also accommodate *extended* or *aspirational* metadata.
+    - A mapping is also provided for SPECTRUM since it used within many museum collection management systems, although not as a metadata transfer format. 
+  - Wikidata references are recommended for key entities such as peoples, organisations, places and events since Wikidata acts as a resolver for related entries in many other sources     
 
-- **Reusable** – data and metadata should be preserved for long term access, and provide Persistent Identifiers (PIDs) to ensure ongoing citability. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
+- **Reusable** – Data and metadata should be preserved for long term access, and provide Persistent Identifiers (PIDs) to ensure ongoing citability. As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
 
 
 ### CARE Principles
