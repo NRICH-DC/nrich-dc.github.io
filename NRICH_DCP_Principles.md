@@ -5,73 +5,52 @@ domain, since they are derived primarily from simple cost-benefit considerations
 for any organisation looking to adopting standards.
 
 ## Standards
-- Standards should not be costly to implement:
 
-  - Standards should be focussed on addressing a specific problem or
-requirement. The business case for adopting such a standard can thus be
-relatively simply constructed.
+Standards have the following distinguishing attributes:
+- They are prescriptive specifications that are designed to for compliance, with the aim of providing consistency, compatibility and interoperability across a domain
+- Consequently they tend to define outcomes rather than processes
+- Compliance can be objectively verified using validation software or another systematic testing methodology
+- They should (ideally) have a reference implementation to demonstrate proof-of-implementability
+- Examples: File formats, metadata standards, quality standards
+    
+Standards should not be costly to implement:
+- Standards should be focussed on addressing a specific problem or requirement. The business case for adopting such a standard can thus be relatively simply constructed.
+- Expansive standards that attempt to solve multiple problems at once tend to be less effective at meeting any of their requirements, more expensive to implement and harder to justify unless an organisation has exactly the same requirements that the standard was designed for.
+- Good standards should generally be accompanied by a complete reference implementation to prove that the standard is implementable, and to act as a second source of truth in the event of ambiguity.
+- Good standards should also be accompanied by a validation process to enable implementers to verify compliance. If this cannot be easily accomplished then the standard is likely to be insufficiently well specified.
 
-  - Expansive standards that attempt to solve multiple problems at once tend to
-be less effective at meeting any of their requirements, more expensive to
-implement and harder to justify unless an organisation has exactly the same
-requirements that the standard was designed for.
+Standards should not be costly to maintain:
+- Standards concerning the long-term retention of materials should evolve slowly and thoughtfully with consideration given to backwards compatibility so that material does not have to be frequently reworked to maintain compliance.
+- At the same time, standards do need to accommodate developments in the wider world, especially with respect to software and hardware tools. Otherwise, standards can become an obsolescence and/or security risk in their own right.
+- When standards do evolve in a manner that breaks backwards compatibility, a migration route should be designed (and implemented, to prove it works).
+- Standards need to accompanied by ongoing support, documentation and training to ensure the necessary workplace skills continue to exist.
 
-  - Good standards should generally be accompanied by a complete reference
-implementation to prove that the standard is implementable, and to act as a
-second source of truth in the event of ambiguity.
-
-  - Good standards should also be accompanied by a validation process to enable
-implementers to verify compliance. If this cannot be easily accomplished then
-the standard is likely to be insufficiently well specified.
-
-- Standards should not be costly to maintain:
-
-  - Standards concerning the long-term retention of materials should evolve
-slowly and thoughtfully with consideration given to backwards compatibility so
-that material does not have to be frequently reworked to maintain compliance.
-
-  - At the same time, standards do need to accommodate developments in the wider
-world, especially with respect to software and hardware tools. Otherwise,
-standards can become an obsolescence and/or security risk in their own right.
-
-  - When standards do evolve in a manner that breaks backwards compatibility, a
-migration route should be designed (and implemented, to prove it works).
-
-  - Standards need to accompanied by ongoing support, documentation and training
-to ensure the necessary workplace skills continue to exist.
-
-- Standards should deliver both short- and long-term benefits
-
-  - A good driver for standards adoption is the availability of tools based on
-the standards that deliver value to the organisation. This is a more likely
-outcome if the standard is easy to implement. For example, the rapid adoption of
-IIIF is partly attributable to the availability of both complete software
-implementations and “shim” code that enabled existing platforms to be compliant.
-
-  - Workforce familiarity as a result of effective training and documentation
-can help to drive standards adoption, but is equally an organisational benefit
-if it ensures that a longer term workforce skills base is developed so that
-maintenance and staffing is less of an issue.
-
-  - Interoperability is a longer term benefit, and therefore less satisfactory
-as a primary driver for adoption although it can be valuable when considering
-exit strategies and risk managements.
+Standards should deliver both short- and long-term benefits
+- A good driver for standards adoption is the availability of tools based on the standards that deliver value to the organisation. This is a more likely outcome if the standard is easy to implement. For example, the rapid adoption of IIIF is partly attributable to the availability of both complete software implementations and “shim” code that enabled existing platforms to be compliant.
+- Workforce familiarity as a result of effective training and documentation can help to drive standards adoption, but is equally an organisational benefit if it ensures that a longer term workforce skills base is developed so that maintenance and staffing is less of an issue.
+- Interoperability is a longer term benefit, and therefore less satisfactory as a primary driver for adoption although it can be valuable when considering exit strategies and risk management.
 
 ## Guidelines
 
-- Guidelines can be more dynamic than standards since they are, by
+Guidelines often cover the more subjective aspects of workflows:
+- They are descriptive, providing guidance and information, with the aim of supporting effective process implementation
+- Verification is often through documentation review, and the demonstrated repeatability of the processes concerned
+- Being practically focussed, they are typically more flexible than standards and can be more changeable
+- Examples: Reference Frameworks, Documentation Guidelines, Methodologies, Policies
+
+Guidelines can be more dynamic than standards since they are, by
 definition, less prescriptive. As such, they can be used by organisations as a
 strategic tool, to track the changing technology and standards landscape and
 make appropriate plans within the constraints of organisational resources and
 timescales
 
-- Guidelines can recommend standards and may recommend more than one standard
+Guidelines can recommend standards and may recommend more than one standard
 if there is not a single optimal path. In that case, guidelines should discuss
 the pros and cons of the various approaches, and also indicate possible
 migration routes or mapping between them. If such routes don’t exist then it is
 likely the different standards address distinct problem domains.
 
-- Guidelines can recommend *how* to implement standards. There are many rather
+Guidelines can recommend *how* to implement standards. There are many rather
 less well-defined or expansive standards that are not cost-effective to
 implement in their entirety. Guidelines can help identify useful subsets or
 specific interpretations of such standards which can be more practical and
@@ -83,36 +62,18 @@ particular standard for similar reasons. For example, BIBFRAME V2.X is very
 different and a great improvement on V1.0 which should be avoided since it
 replicated many of the issues of its predecessor, MARC.
 
-- As guidelines operate at a more strategic level than standards they can
+As guidelines operate at a more strategic level than standards they can
 indicate when standards are becoming obsolete-as happens to all technologies. In
 this case, they should also identify exit strategies and migration paths.
 
-## Common design pitfalls in standards and guidelines development
+## Common Pitfalls
 
-- Over prescriptive guidelines or standards can be a significant long term
-dis-benefit by hampering the use of new technologies and techniques. Good
-approaches are:
-
-  - Standards should be simple and focussed on a well-defined
-requirement/problem (see previous).
-
-  - Prescribe only the minimum elements required to achieve the goals of the
-standard. This reduces both the cost of implementation but also minimises the
-cost of interoperability and migration efforts downstream.
-
-  - Evaluate design decisions in terms of what functionalities they prevent as
-well as what they enable. All standards involve some trade-offs and this is
-especially true for long term preservation applications. For example, the choice
-of PDF format for archiving publications was good for human readability but did
-not consider machine readability as a requirement, not only making subsequent
-text mining and analytics of such materials difficult but also reducing the
-effectiveness of accessibility tools such as screen readers.
-
-  - Beyond the minimal core requirements it may be useful to provide or document
-an optional extension mechanism that makes a clear distinction between core
-functionality and functionality that is considered more friable in the long
-term.
-
+**Over prescription** can be a significant long term dis-benefit by hampering 
+the use of new technologies and techniques. Good approaches are:
+- Standards should be simple and focussed on a well-defined requirement/problem (see previous).
+- Prescribe only the minimum elements required to achieve the goals of the standard. This reduces both the cost of implementation but also minimises the cost of interoperability and migration efforts downstream.
+- Evaluate design decisions in terms of *what functionalities they prevent* as well as what they enable. All standards involve some trade-offs and this is especially true for long term preservation applications. For example, the choice of PDF format for archiving publications was good for human readability but did not consider machine readability as a requirement, not only making subsequent text mining and analytics of such materials difficult but also reducing the effectiveness of accessibility tools such as screen readers.
+- Beyond the minimal core requirements it may be useful to provide or document an optional extension mechanism that makes a clear distinction between core functionality and functionality that is considered more friable in the long term.
 - Over complex standards that are expensive and time consuming to implement are
 likely to be avoided on a simple cost basis. Even when there is adoption, it is
 likely that only a subset of the standard or guideline is implemented (to solve
