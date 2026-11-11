@@ -9,9 +9,9 @@ to reduce future investment risks. It will test the key elements and examine the
 infrastructure for cultural heritage in the UK. Core activities will include a digitisation capability pilot (DCP), a prototype infrastructure, and three cross-cutting
 research frameworks on environmental impact, ethics, and cybersecurity.
 
-## About The Digitisation Capability Pilot
+## About The DCP
 
-This project will design, test, cost and establish the priorities of a scalable methodology for digitisation across diverse cultural heritage collection types. 
+The Digitisation Capability Pilot will design, test, cost and establish the priorities of a scalable methodology for digitisation across diverse cultural heritage collection types. 
 This will include data capture and metadata creation and augmentation with a focus on the use of machine learning and Generative AI to accelerate data production.
 
 Specifically, the project does not proscribe particular file or metadata formats, or specific systems. 
