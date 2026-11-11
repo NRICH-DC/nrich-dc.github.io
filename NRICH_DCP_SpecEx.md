@@ -1,11 +1,10 @@
-# N-RICH Digitisation Capabilities Prototype - Explanatory Notes
+# N-RICH Digitisation Capabilities - Explanatory Notes
 
 ## Introduction
 
 This document provides a verbal overview of the specifications. It includes 
 more explanatory details than the formal specification, providing the reasoning 
-behind decisions made in drafting the specifications, identifying where 
-feedback from the community has been incorporated.   
+behind decisions made in drafting the specifications.   
 
 These standards and guidelines are the outcome of the N-RICH Digitisation
 Capabilities Pilot and target cultural heritage digitisation resulting in 2D
@@ -89,13 +88,10 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
 
 The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for.
 
-**Collective Benefit** Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
-
-**Authority to Control** Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
-
-**Responsibility** Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
-
-**Ethics** Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
+- **Collective Benefit** Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
+- **Authority to Control** Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
+- **Responsibility** Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
+- **Ethics** Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
 
 The CARE Principles come to the fore when making selection decisions and through the crafting of metadata that reflects indigenous concerns. When CARE considerations are a factor, these must be addressed in an object or collection level appraisal of the item and released as part of the object metadata. The use of Wikidata to map between indigenous and conventional representations of place, events and peoples can also be useful in this context.   
 
@@ -105,11 +101,13 @@ The CARE Principles come to the fore when making selection decisions and through
 
 Transparency around how and why selection decisions have been made is essential so that the researchers and the public can understand gap between what is available digitally, and what actually exists (or exist*ed*). The specification identifies key three selection events about which documentary information can be required. These may be high level policies or, for specific projects or cases, more descriptive documents. Each may be published at an organisational, collection or item level.  
 
-1. Accession - why and how collections and/or items are acquired
-2. Digitisation - why and how material is selected for digitisation
-3. Appraisal - why an item/collection is considered culturally significant, at risk and/or unique. This may include CARE considerations if applicable.  
+- **Accession** Document why and how collections and/or items are acquired
+- **Digitisation** Document why and how material is selected for digitisation
+- **Appraisal** Document why an item/collection is considered culturally significant, at risk and/or unique. This may include CARE considerations if applicable.  
 
 Item level documentation is typically only required for special one-off acquisitions or similar special cases.
+
+Accession polices are relatively common in the museum and archival communities since they are required for various certification processes. They are less ubiquitous in libraries. 
 
 #### Baseline
 
@@ -125,14 +123,9 @@ Item level documentation is typically only required for special one-off acquisit
 - Digitisation documentation must be published at either an organisational or collection/project level  
 
 #### Aspirational
+
 - Extended requirements plus...
 - Appraisal documentation must be available at collection or item level
-
-| Document  | Requirements |
-| ----- | ----- |
-| Collection/Accession Policy<br> – why and how collections and/or items are acquired | MUST be published at organisation level<br>SHOULD be published at a collection level<br>OPTIONAL at item level (for special acquisitions) |
-| Digitisation Policy<br> – why and how material is selected for digitisation | SHOULD be published at organisation level<br>SHOULD be published at a collection/project level<br>OPTIONAL at item level (for special acquisitions) |
-| Appraisal/Evaluation Document<br> - why is an item/collection considered culturally significant, at risk and/or unique | OPTIONAL at a collection level<br>OPTIONAL at item level (for special acquisitions) |
 
 ### Guidelines
 
@@ -143,36 +136,37 @@ considerable detail on good practice for selection processes and the
 accompanying documentation.
 
 The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials.
+
 ## Metadata
 
-This section focuses on object metadata that is made available to researchers
-and the public through the N-RICH shared infrastructure. Metadata is structured
-rather than documentary information, and is thus more amenable to computation
-and automation. Conceptually, in terms of information content, a digital object
-should be considered as a composite entity composed of multiple data streams
-that can be labelled as data, metadata, documentation or paradata but all of
-which contribute to overall meaning and understanding.
+This section focuses on object metadata that is made available to researchers and the public through the N-RICH shared infrastructure. Metadata is structured rather than documentary information, and is thus more amenable to computation and automation. Conceptually, in terms of information content, a digital object should be considered as a composite entity composed of multiple data streams that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding.
 
-Organisations are likely to keep additional metadata or documentation
-information depending on curatorial capabilities or their internal process
-needs. Where such additional information exists online, it SHOULD be linked in
+Organisations are likely to keep additional metadata or documentation information depending on curatorial capabilities or their internal process needs. This specification avoids making a distinction between the physical object and more abstract bibliographic entities such as [Works and Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. If required, the ability to link to more detailed metadata allows these types of relationships to be exposed.
+
+Cultural heritage materials are enormously diverse so the common attributes that can be used to construct generic interfaces for services such as discovery is somewhat limited. This specification is based on [Dublin Core](https://www.dublincore.org/specifications/) Elements with some additions from the more specific DC Terms.  Note that some fields specifically refer to attributes of the physical object being digitised which are inherited by the digital object, while others are unique to the digital object.
+
+### Standard
+
+#### Baseline
+- title:
+- description
+- type
+- related
+- creator
+- contributor
+- provenance
+- subject
+- spatial coverage
+- temporal coverage
+- language
+
+
+Where such additional information exists online, it SHOULD be linked in
 the metadata for the objects to which it applies.
 
-Cultural heritage materials are enormously diverse so the common attributes
-that can be used to construct generic interfaces for services such as discovery
-is somewhat limited. This specification is based on [Dublin
-Core](https://www.dublincore.org/specifications/) Elements with some additions
-from the more specific DC Terms. Standardised formats or controlled vocabularies
+Standardised formats or controlled vocabularies
 SHOULD be used in preference to plaintext where this is indicated in
-parentheses. Note that some fields specifically refer to attributes of the
-physical object being digitised which are inherited by the digital object, while
-others are unique to the digital object.
-
-This specification avoids making a distinction between the physical object and
-more abstract bibliographic entities such as [Works and
-Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. If
-required, the ability to link to more detailed metadata allows these types of
-relationships to be exposed.
+parentheses.
 
 #### Metadata about the Physical Object
 
