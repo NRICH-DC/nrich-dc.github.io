@@ -54,7 +54,7 @@ also requirements.
 
 ### FAIR Data
 
-The [FAIR principles]() encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
+The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
 
 - **Findable** – Metadata specifications will:
   - Allow the construction of a discovery service what will allow a researcher to find the object that they require
