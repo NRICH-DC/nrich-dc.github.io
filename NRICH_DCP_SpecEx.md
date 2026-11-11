@@ -104,14 +104,16 @@ The CARE Principles come to the fore when making selection decisions and through
 ### Standard
 
 Transparency around how and why selection decisions have been made is essential so that the researchers and the public can understand gap between what is available digitally, and what actually exists (or exist*ed*). The specification identifies key three selection events about which documentary information can be required. These may be high level policies or, for specific projects or cases, more descriptive documents. Each may be published at an organisational, collection or item level.  
+
 1. Accession - why and how collections and/or items are acquired
 2. Digitisation - why and how material is selected for digitisation
 3. Appraisal - why an item/collection is considered culturally significant, at risk and/or unique. This may include CARE considerations if applicable.  
-Item level
+
+Item level documentation is typically only required for special one-off acquisitions or similar special cases.
 
 #### Baseline
 
-- Organisational accession policy must be published
+- Organisational accession documentation (almost always a policy) must be published
 - If collection or item level documents exist
   - They must be published
   - They must be referenced in the metadata of the objects to which they apply    
@@ -119,8 +121,8 @@ Item level
 #### Extended
 
 - Baseline requirements plus...
-- Collections level policies must be published for all collections
-- Digitisation policies must be published at either an organisational or collection/project level  
+- Accession documentation must be published for all collections
+- Digitisation documentation must be published at either an organisational or collection/project level  
 
 #### Aspirational
 - Extended requirements plus...
