@@ -1,4 +1,4 @@
-# N-RICH Digitisation Capabilities Prototype - Design Principles
+# N-RICH Digitisation Capabilities - Design Principles
 
 Most of the principles outlined here are not specific to the cultural heritage
 domain, since they are derived primarily from simple cost-benefit considerations
@@ -118,7 +118,7 @@ validate compliance at each stage and gain a sense of achievement, rather than
 attempting a large implementation and compliance exercise that is time and
 resource consuming with a high chance of failure.
 
-Standards and guideless should **change slowly** over time, and should be
+Standards and guidelines should **change slowly** over time, and should be
 recognised as doing so. This encourages smaller organisations to seek compliance
 since it is an achievable goal rather than a continuously receding target.
 
