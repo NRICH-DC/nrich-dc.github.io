@@ -22,23 +22,34 @@ used approaches are chosen where possible. Many standards overlap, and where a
 choice has been made, it favours simplicity and flexibility for the pragmatic 
 reason that such standards are easier to validate and map to other approaches.
 
+This is deliberately not an expansive specification and the expectation is that 
+this will extend over time as skills and technology evolve.
+
 ### Audience
+
 This document is intended primarily for collection holders digitising material
 for inclusion in N-RICH. However, it is also of informative for those
 implementing N-RICH infrastructure and tools.
 
 ### Overview
 
-These recommendations will follow the conceptual workflow used
-in the [Review of Standards and Guidelines](link required).  This is deliberately not an
-expansive specification and the expectation is that this will extend over time
-as skills and technology evolve.
+These recommendations will follow the conceptual digitisation workflow below. 
 
 - **Selection** is concerned with identifying objects as in-scope (i.e. cultural heritage), then making a series of evaluation and selection decisions: to determine whether they are accessioned into a physical collection, and subsequently, to determine priority for downstream actions such as conservation or digitisation. 
 - **Metadata** focuses on metadata creation to go alongside the digitised artefact. This includes descriptive information about the underlying physical artefect and technical information but, also links to related objects and rights related information.
 - **Imaging** is largely a technical activity and thus amenable to setting and measuring quality standards.
 - **Preservation** concerns the long-term availability of the digitised object (to avoid having to re-digitise). Often file formats suitable for preservation are not optimal for use by the public or researchers.
 - **Access** needs to consider both human and machine consumption which requires both presentation systems and APIs. However, discovery and reliable referencing is also requirements.
+
+## Levels of Compliance
+
+The specification identifies 3 levels of compliance:
+
+| Level | Description |
+| ----- | ----- |
+| Baseline | These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
+| Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
+| Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
 
 ## FAIR Principles
 
@@ -61,32 +72,29 @@ The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad
     - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
     - IIIF supports complex objects such as books and newspapers, large objects displayed using tiled images such as maps and scrolls and alternate views to support features such as foldouts and two-page spreads
     - IIIF integrates with a wide variety of research tools such as Optical Character Recognition (OCR), Handwritten Text Recognition (HTR), crowdsourcing platforms such as Zooniverse, Web Annotation (by humans and machines) and image analytics (AI or otherwise)
-  - OAI-PMH for harvesting of metadata
+  - [OAI-PMH](https://www.openarchives.org/pmh/) is a simple mechanism for publishing metadata for harvesting by other services (e.g. N-RICH infrastructure)
   - Metadata requirements can be met using several formats
-    - Dublin CORE is the simplest and most common metadata format but has limited expressiveness for information beyond the *baseline* requirements
-    - Europeana Data Model already used by a number of collections and systems to feed metadata into Europeana. It has a stronger cultural heritage focus and therefore can accommodate *extended* or *aspirational* metadata.
-    - LinkedART is a subset of the CIDOC-CRM (developed by the International Council of Museums). While the CRM is very expansive and can be daunting to implementers, LinkedARt is rather simpler and aligns with the N-RICH infrastructure prototype requirements. It can also accommodate *extended* or *aspirational* metadata.
-    - A mapping is also provided for SPECTRUM since it used within many museum collection management systems, although not as a metadata transfer format. 
-  - Wikidata references are recommended for key entities such as peoples, organisations, places and events since Wikidata acts as a resolver for related entries in many other sources     
+    - [Dublin Core](https://www.dublincore.org/specifications/) is the simplest and most common metadata format but has limited expressiveness for information beyond the *baseline* requirements
+    - The [Europeana Data Model](https://pro.europeana.eu/index.php/page/edm-documentation) is already used by a number of collections and systems to feed metadata into Europeana. It has a stronger cultural heritage focus and therefore can accommodate *extended* or *aspirational* metadata.
+    - [LinkedART](https://linked.art/) is a subset of the [CIDOC-CRM](https://cidoc-crm.org/) developed by the [International Council of Museums](https://icom.museum/en/). While the CRM is very expansive and can be daunting to implementers, LinkedArt is rather simpler and aligns with the N-RICH infrastructure prototype requirements. It can also accommodate *extended* or *aspirational* metadata.
+    - A mapping is also provided for [SPECTRUM](https://collectionstrust.org.uk/spectrum/) since it used within many museum collection management systems, although not as a metadata format *per se*. 
+  - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) references are recommended for key entities such as people, groups, organisations, places and events. While Wikidata is not a canonical source for such entities, it links to many other resources and thus acts as a resolver for related entries these sources.     
 
 - **Reusable** – Data and metadata should available for researchers in the longer term for both new research and reproducibility purposes. The specification 
-  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. Data DOIs and ARKs
-  - Digital materials (both data and metadata) should be archived in a certified archiving service. The specification recommends  
-  - As metadata can be updated over time, versioning should also be supported to ensure referential integrity over the longer term.
+  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. The specification recommends using [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/).
+  - Digital materials (both data and metadata) should be archived using a service that is [CoreTrustSeal](https://www.coretrustseal.org/) certified to ensure continued availability.   
+  - As metadata can be updated over time, previous versions should also be archived supported to ensure referential integrity over the longer term. The OAI-PMH protocol allows for the publication of updates to previously harvested records.
 
 ## CARE Principles
 
-The [CARE Principles](https://www.gida-global.org/careprinciples) outlines specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for may be a consideration outline consideration of **Collective Benefit, Authority to Control, Responsibility** and **Ethics**
+The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for.
 
-## Levels of Compliance
+**Collective Benefit** Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
+**Authority to Control** Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
+**Responsibility** Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
+**Ethics** Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
 
-The specification identifies 3 levels of compliance:
-
-| Level | Description |
-| ----- | ----- |
-| Baseline | These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
-| Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
-| Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
+The CARE Principles come to the fore when making selection decisions and through the crafting of metadata that reflects indigenous concerns. When CARE considerations are a factor, these must be addressed in an object or collection level appraisal of the item and released as part of the object metadata. The use of Wikidata to map between indigenous and conventional representations of place, events and peoples can also be useful in this context.   
 
 ## Selection
 
@@ -128,8 +136,6 @@ information depending on curatorial capabilities or their internal process
 needs. Where such additional information exists online, it SHOULD be linked in
 the metadata for the objects to which it applies.
 
-### Core Metadata
-
 Cultural heritage materials are enormously diverse so the common attributes
 that can be used to construct generic interfaces for services such as discovery
 is somewhat limited. This specification is based on [Dublin
@@ -159,25 +165,6 @@ relationships to be exposed.
 | :--- | :--- |
 | dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
 
-### Mappings 
-**This section is work-in-progress**
-
-The Dublin Core fields can be mapped to equivalent fields in other
-interoperability standards, such as the Europeana Data Model and LinkedArt.
-These are more expressive models which may permit a more nuanced expression of
-object metadata. Whichever standards is chosen, they MUST be serialised as
-[RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/) or JSON-LD for harvesting.
-
-| **Dublin Core** | **Europeana** **Data Model** **(edm:WebResource)** | **LinkedArt** **(abbreviated)** | 
-| --- | --- | --- | 
-| dc:title | dc:title | identified_by:<br>  type: "Name" |
-| dc:description | dc:description |referred_to_by:<br>  type: "LinguisticObject",<br>  classified_as:<br>    type: "Type",<br>    _label: "Description", |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-
 ### WikiData
 
 Amongst other functions,
@@ -188,24 +175,12 @@ to multiple sources which are. Therefore, for person and named place references
 metadata SHOULD use links to WikiData references rather than specific sources,
 where they exist.
 
-### Multiple objects
+### Guidelines
 
-Some objects might only be described
-at an aggregate level (e.g. boxes of material). This can be accommodated since
-there is not requirement that a record must link to a single IIIF object. There
-can be multiple *dc:references* links in a record.
+- Some objects might only be described at an aggregate level (e.g. boxes of material). This can be readily accommodated since a record can link to multiple digtised objects.
 
-### Metadata-only objects
-
-Some objects, for various reasons, may not be available online, but can still
-publish a useful metadata record that records the existence of the object and
-mechanisms for access. This can apply to both undigitised items and items that
-cannot be made available for legal or other reasons. Resources such [Early
-Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the
-significant research value of a suitably structured catalogue even in the
-absence of digitised surrogates.
-
-### Notes
+- Some objects, for various reasons, may not be available online, but it is still possible to publish a useful metadata record that records the existence of the object and document how it can be accessed. This can apply to both undigitised items and items that cannot be made available for legal or other reasons.
+  - Resources such [Early Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the significant research value of a suitably structured catalogue even in the absence of digitised surrogates.
 
 It is expected that organisations will be able to accommodate the required
 metadata within the systems and schemas that they already use. Formats are
@@ -222,10 +197,15 @@ materials. While it is possible to go into considerable detail on quality
 standards, many organisations will lack the technical capacity to conform to, or
 verify compliance, with such standards, rendering them moot.
 
-### Minimum Imaging Quality Standards
+### Standard
 
-These are based on the National Archives’ “[Guidance on techniques for digitising documents and other materials](https://cdn.nationalarchives.gov.uk/documents/information-management/digitisation-at-the-national-archives.pdf)” which provide a good balance of
-detail vs practicality.
+The specification aims for a complete image of an object to be at least 4.5 megapixels in resolution, which is within the reach of almost all digital and phone cameras currently available. For comparison, a typical monitor is around 2-4 megapixels so it allows a modest amount of zooming in for more detail. For objects with high levels of detail, it makes sense to capture more detailed images, perhaps using image stitching software or in-camera panorama features to combine multiple images. IIIF viewers provide the ability to zoom and pan across larger images automatically.
+
+Objects should occupy span at least 90% of an image in one direction but it should not go right to the edge of the image so viewers can be sure that no part of the object is cut off. A long, thin object should 
+
+These are based on the National Archives’ “[Guidance on techniques for digitising documents and other materials](https://cdn.nationalarchives.gov.uk/documents/information-management/digitisation-at-the-national-archives.pdf)” which provide a good balance of detail vs practicality.
+
+ 
 
 - Full colour materials MUST be captured in 24-bit colour, and SHOULD use the
 [Enumerated sRGB](https://webstore.iec.ch/en/publication/6169) colourspace
