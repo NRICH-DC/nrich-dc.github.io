@@ -169,7 +169,8 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *format*: description of file format of the digitised object
   - *identifer\*: one or more persistent identifiers for the object, and any local identifiers  
   - *publisher*: name of the organisation originally publishing the metadata record and digitised object
-  - *issued*: date that the metadata record and digtised object were published  
+  - *issued*: date that the metadata record and digtised object were published
+
 #### Extended
 - Baseline requirements plus the following qualifications...
 - Required metadata about the Physical Object
@@ -183,7 +184,8 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   -  *rights holder*: as with *creator*
   -  *format*: must use [MIME Type](http://www.iana.org/assignments/media-types/)
   -  *publisher*: must use [Research ORganisation](https://ror.org/) identifier 
-  -  *issued*: as with *created*   
+  -  *issued*: as with *created*
+
 #### Aspirational
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
 - Events/activities must conform to the same requirements as other metadata:
@@ -196,8 +198,8 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 - Some objects might only be described at an aggregate level (e.g. boxes of material). This can be readily accommodated since a record can link to multiple digitised objects (*references*).
 - Some objects, may not be able to be made available online for GDPR, CARE sensitivity or other cultural or legal reasons. It is still possible to publish a useful metadata record that records the existence of the object and document how it can be accessed. In this case there may be no *references* in the metadata record. This can also apply to undigitised items.
   - Resources such [Early Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the significant research value of a suitably structured metadata catalogue even in the absence of digitised surrogates.
-- Converting from plaintext metadata in the *baseline* to the controlled vocabularies and authorities required by *extended* compliance is a non-trivial task. While improving metadata *at source* is an aspirational goal, there is a need for retrospective conversion. Reconciliation and some AI tools can be used to partially automate such as transition. 
- 
+- Converting from plaintext metadata in the *baseline* to the controlled vocabularies and authorities required by *extended* compliance is a non-trivial task. While improving metadata *at source* is an aspirational goal, there is a need for retrospective conversion. Reconciliation and some AI tools can be used to partially automate such as transition.
+
 ## Imaging
 
 This section focuses on minimum quality guidelines for 2D imaging materials. While it is possible to go into considerable detail on quality standards, many organisations will lack the technical capacity to conform to, or verify compliance, with such standards, rendering them moot.
