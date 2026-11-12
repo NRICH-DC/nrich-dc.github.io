@@ -176,24 +176,28 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *creator\**: must reference a recognised identity resource such as a Wikidata URL (as mentioned above) or an [ISNI](https://isni.org/) reference URL  
   - *contributor\**: as with *creator*
   - *created*: must use [ISO8601](https://www.iso.org/standard/70908.html) standard date format but can use Extended Date-Time Format (EDTF) to express uncertainty
-  - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709)(geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html)(country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
-  - *language\**: must use one of 
+  - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
+  - *language\**: must use one of [RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html) language identifers
+  - *subject\**: one or more keywords that help describe the object
+- Required metadata about the Digital Object
+  -  *rights holder*: as with *creator*
+  -  *format*: must use [MIME Type](http://www.iana.org/assignments/media-types/)
+  -  *publisher*: must use [Research ORganisation](https://ror.org/) identifier 
+  -  *issued*: as with *created*   
+#### Aspirational
+- Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
+- Events/activities must conform to the same requirements as other metadata:
+  - Times/Dates should use [ISO8601](https://www.iso.org/standard/70908.html) with EDTF
+  - Locations should use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
+  - Agents should use must reference a recognised identity resource such as a Wikidata URL (as mentioned above) or an [ISNI](https://isni.org/) reference URL       
 
 ### Guidelines
 
 - Some objects might only be described at an aggregate level (e.g. boxes of material). This can be readily accommodated since a record can link to multiple digitised objects (*references*).
-
 - Some objects, may not be able to be made available online for GDPR, CARE sensitivity or other cultural or legal reasons. It is still possible to publish a useful metadata record that records the existence of the object and document how it can be accessed. In this case there may be no *references* in the metadata record. This can also apply to undigitised items.
   - Resources such [Early Modern Letters Online](https://emlo.bodleian.ox.ac.uk/) demonstrate the significant research value of a suitably structured metadata catalogue even in the absence of digitised surrogates.
-
-It is expected that organisations will be able to accommodate the required
-metadata within the systems and schemas that they already use. Formats are
-discussed for informational purposes but the emphasis is on ensuring the
-relevant data exists – mapping can be used to convert to suitable consumption
-forms when the need arises. However, the use of authorities and reference
-ontologies at source *is* strongly encouraged - these are discussed in more
-detail in the Access section.
-
+- Converting from plaintext metadata in the *baseline* to the controlled vocabularies and authorities required by *extended* compliance is a non-trivial task. While improving metadata *at source* is an aspirational goal, there is a need for retrospective conversion. Reconciliation and some AI tools can be used to partially automate such as transition. 
+ 
 ## Imaging
 
 This section focuses on minimum quality guidelines for 2D imaging materials. While it is possible to go into considerable detail on quality standards, many organisations will lack the technical capacity to conform to, or verify compliance, with such standards, rendering them moot.
@@ -201,13 +205,22 @@ This section focuses on minimum quality guidelines for 2D imaging materials. Whi
 ### Standard
 
 #### Baseline
-\zA
+
 - The specification aims for a complete image of an object to be a minimum of 4.5 megapixels in resolution. This is within the reach of almost all digital and phone cameras currently available. A typical image is more likely to be 10-18 meagpixels. For comparison, a typical monitor is around 2-4 megapixels so it allows a modest amount of zooming in for more detail.
 - For objects with high levels of detail, it makes sense to capture more detailed images, perhaps using image stitching software or in-camera panorama features to combine multiple images. IIIF viewers provide the ability to zoom and pan across larger images automatically.
 - Colour objects should be captured using 24-bit colour (8-bits per colour channel) which is standard for most cameras.
 - Monochrome sources such as microfilm may be captured using 8-bit greyscale.
 - Objects must span at least 90% of the final image in one direction (to allow for long, thin objects) but they should not extend right to the edge of the image so viewers can be sure that no part of the object is cut off.
 - Objects should be photographed against a uniform, neutral background that contrasts with the object so that its edges can be clearly identified.
+
+#### Extended
+
+Objects can, of course, be imaged at higher resolutions than baseline requirements if resources permit. They are, however, made available online in the same way as lower resolution images.
+
+#### Aspirational
+  
+- More advanced techniques such as hyperspectral imaging are very specific to particular projects and must be published as separate digital objects alongside conventional imaging. 
+- Such objects should be accompanied by digitisation selection documentation detailing why the techniques in question were chosen.      
 
 ### Guidelines
 
@@ -249,31 +262,18 @@ N-RICH compliant documentation such as selection policies MUST use one of the fo
 - [Markdown](https://www.markdownguide.org/)
 - [TeX](https://en.wikipedia.org/wiki/TeX)
 
-### Persistent Identifiers
+Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers. 
 
-Objects (both physical and digital) and their metadata MUST be referenceable and
-accessible via persistent identifiers. [ARK](https://arks.org/) or [DataCite
-DOI](https://datacite.org/) SHOULD be used since they have provision for
-resolver services that can handle movement of objects between providers,
-enabling persistent references in the longer term.
+Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
 
-### Image Access
+Digitised objects should be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book. The   
 
-Digitised images MUST be made available via an [International Image
-Interoperability Framework](https://iiif.io) service. IIIF also provides access
-to a rich set of presentation tools for pubic and scholarly access. IIIF
-services can operate over both JPEG2000 and TIFF images, so are compatible with
-preservation recommendations.
+#### Extended
 
-### Metadata Access API
+[ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/) persistent identifers must be used since they have provision for resolver services that can handle movement of objects between providers, enabling persistent references in the longer term.
 
-Metadata SHOULD be available for harvest via
-[OAI-PMH](https://www.openarchives.org/pmh/) which provides a mechanism for
-picking up just updated records, and collection-based filtering. Any additional
-metadata SHOULD also be made available in its native form via the same
-mechanism, signposted via *dc:*s*ource* or *dc:related* **links in the
-metadata.
+Metadata must be available for harvest via [OAI-PMH](https://www.openarchives.org/pmh/) which provides a mechanism for picking up just updated records, and collection-based filtering. 
 
-    
+#### Aspirational
 
-
+Collection holders should harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers, incorporating the additional information into their collection management or cataloguing systems.
