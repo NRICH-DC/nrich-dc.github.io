@@ -1,4 +1,4 @@
-# N-RICH Digitisation Capabilities Prototype - Overview
+# N-RICH Digitisation Capabilities - Overview
 
 ## Objectives
 
