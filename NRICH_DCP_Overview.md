@@ -20,7 +20,7 @@ collection holders
   - [FAIR principles](https://www.go-fair.org/) require research data to be **Findable, Acessible, Interoperable** and **Reusable**.
   - [CARE Principles](https://www.gida-global.org/careprinciples) for Indigenous (and other culturally sensitive) materials requires consideration of **Collective Benefit, Authority to Control, Responsibility** and **Ethics**
   - A general principle of "as open as possible, and as closed as necessary"
-  
+
 ## Scope
 
 Bearing this in mind, it is not feasible for a cost-effective and scalable
