@@ -46,9 +46,11 @@ The specification identifies 3 levels of compliance:
 
 | Level | Description |
 | ----- | ----- |
-| Baseline | These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
+| Baseline | Describes to "minimum viable set". These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
 | Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
 | Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
+
+Conceptually, in terms of knowledge content, much of the meaning of an artefact is derived from information that is not intrinsic to the object itself. Its cultural significance instead comes largely from its original context, provenance, and interactions with people and culture over time. Correspondingly, a digital surrogate or born-digital object should be considered as a composite entity composed of multiple files that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding. The *aspirational* level recognises this, along with the fact the such information is not commonly generated as part of conventional collection management practice but rather from research or specific projects. Such information can be included in N-RICH by leveraging the event-based metadata capabilities of the Europeana Data Model or LinkArt standards. However, it would also be desirable for collection holders to be able to capture information from other sources (such as research conducted using N-RICH) to include in their metadata. The *aspirational* level thus also describes collections harvesting metadata back from N-RICH or other sources, recognising that this would require a significant changes in both institutional practice and catalogue/collection management systems.              
 
 ## FAIR Principles
 
@@ -109,21 +111,18 @@ Item level documentation is typically only required for special one-off acquisit
 
 Accession polices are relatively common in the museum and archival communities since they are required for various certification processes. They are less ubiquitous in libraries. 
 
-#### Baseline
-
+**Baseline**
 - Organisational accession documentation (almost always a policy) must be published
 - If collection or item level documents exist
   - They must be published
   - They must be referenced in the metadata of the objects to which they apply    
 
-#### Extended
-
+**Extended**
 - Baseline requirements plus...
 - Accession documentation must be published for all collections
 - Digitisation documentation must be published at either an organisational or collection/project level  
 
-#### Aspirational
-
+**Aspirational**
 - Extended requirements plus...
 - Appraisal documentation must be available at collection or item level
 
@@ -139,7 +138,7 @@ The [CARE Principles](https://www.gida-global.org/careprinciples) outline specif
 
 ## Metadata
 
-This section focuses on object metadata that is made available to researchers and the public through the N-RICH shared infrastructure. Metadata is structured rather than documentary information, and is thus more amenable to computation and automation. Conceptually, in terms of information content, a digital object should be considered as a composite entity composed of multiple data streams that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding.
+This section focuses on object metadata that is made available to researchers and the public through the N-RICH shared infrastructure. Metadata is structured rather than documentary information, and is thus more amenable to computation and automation.
 
 Organisations are likely to keep additional metadata or documentation information depending on curatorial capabilities or their internal process needs. This specification avoids making a distinction between the physical object and more abstract bibliographic entities such as [Works and Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. If required, the ability to link to more detailed metadata allows these types of relationships to be exposed.
 
@@ -147,9 +146,9 @@ Cultural heritage materials are enormously diverse so the common attributes that
 
 ### Standard
 
-Items marked with an asterisk may occur more than once in a metadata record. The specification allows metadata to be expressed in one of three formats: Dublin Core, Europeana Data Model (EDM) and LinkedArt to give collection holders flexibility when publishing their data. Each of the three formats are expressible as [Linked-Data](https://www.w3.org/DesignIssues/LinkedData) which allows data from multiple sources to be integrated into complex "knowledge graphs" that open the way to a variety of discovery, navigation and analytical approaches. *Baseline* and *extended* requirements can be accommodated within all three formats but *aspirational* requirements make use of advanced event-based features that only EDM and LinkedArt support.  
+Items marked with an asterisk may occur more than once in a metadata record. The specification allows metadata to be expressed in one of three formats: Dublin Core, Europeana Data Model (EDM) and LinkedArt to give collection holders flexibility when publishing their data. Each of the three formats are expressible as [Linked-Data](https://www.w3.org/DesignIssues/LinkedData) which allows data from multiple sources to be integrated into complex "knowledge graphs" that open the way to a variety of discovery, navigation and analytical approaches. *Baseline* and *extended* requirements can be accommodated within all three formats but *aspirational* requirements make use of advanced event-based features that only EDM and LinkedArt support. Since the specification addresses digitised materials, there is a distinction between metadata relating to the physical objects and its digital surrogate, which would obviously not apply to a born-digital object.    
 
-#### Baseline
+**Baseline**
 - Required metadata about the Physical Object
   - *title*: Short text identifying the object as uniquely as possible 
   - *description*: Longer more descriptive text
@@ -171,7 +170,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *publisher*: name of the organisation originally publishing the metadata record and digitised object
   - *issued*: date that the metadata record and digtised object were published
 
-#### Extended
+**Extended**
 - Baseline requirements plus the following qualifications...
 - Required metadata about the Physical Object
   - *creator\**: must reference a recognised identity resource such as a Wikidata URL (as mentioned above) or an [ISNI](https://isni.org/) reference URL  
@@ -186,7 +185,8 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   -  *publisher*: must use [Research ORganisation](https://ror.org/) identifier 
   -  *issued*: as with *created*
 
-#### Aspirational
+**Aspirational**
+- Extended requirements plus...
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
 - Events/activities must conform to the same requirements as other metadata:
   - Times/Dates should use [ISO8601](https://www.iso.org/standard/70908.html) with EDTF
@@ -206,8 +206,7 @@ This section focuses on minimum quality guidelines for 2D imaging materials. Whi
 
 ### Standard
 
-#### Baseline
-
+**Baseline**
 - The specification aims for a complete image of an object to be a minimum of 4.5 megapixels in resolution. This is within the reach of almost all digital and phone cameras currently available. A typical image is more likely to be 10-18 meagpixels. For comparison, a typical monitor is around 2-4 megapixels so it allows a modest amount of zooming in for more detail.
 - For objects with high levels of detail, it makes sense to capture more detailed images, perhaps using image stitching software or in-camera panorama features to combine multiple images. IIIF viewers provide the ability to zoom and pan across larger images automatically.
 - Colour objects should be captured using 24-bit colour (8-bits per colour channel) which is standard for most cameras.
@@ -215,12 +214,12 @@ This section focuses on minimum quality guidelines for 2D imaging materials. Whi
 - Objects must span at least 90% of the final image in one direction (to allow for long, thin objects) but they should not extend right to the edge of the image so viewers can be sure that no part of the object is cut off.
 - Objects should be photographed against a uniform, neutral background that contrasts with the object so that its edges can be clearly identified.
 
-#### Extended
+**Extended**
+- Baseline requirements plus...
+- Objects can, of course, be imaged at higher resolutions than baseline requirements if resources permit. They are, however, made available online in the same way as lower resolution images.
 
-Objects can, of course, be imaged at higher resolutions than baseline requirements if resources permit. They are, however, made available online in the same way as lower resolution images.
-
-#### Aspirational
-  
+**Aspirational**
+- Extended requirements plus...
 - More advanced techniques such as hyperspectral imaging are very specific to particular projects and must be published as separate digital objects alongside conventional imaging. 
 - Such objects should be accompanied by digitisation selection documentation detailing why the techniques in question were chosen.      
 
@@ -234,19 +233,17 @@ The specification leverages existing digital preservation practice and certifica
 
 ### Standard
 
-#### Baseline
+**Baseline**
+- Preservation is not a *baseline* requirement
 
-Preservation is not a *baseline* requirement
-
-#### Extended
-
+**Extended**
 - Materials must be archived in a [CoreTrustSeal](https://www.coretrustseal.org/) certified repository or service.
 - Digitised material must be archived in a format that is suitable for long-term preservation. For 2D imaged materials, [TIFF](https://www.iso.org/standard/34342.html) or uncompressed JPEG2000 are acceptable formats.
 - Metadata must be stored alongside image data in the native format used by the originating organisation.
 
-#### Aspirational
-
-Archiving an additional version of the metadata formatted for compliance with N-RICH.
+**Aspirational**
+- Extended requirements plus...
+- Archiving an additional version of the metadata formatted for compliance with N-RICH.
 
 ### Guidelines
 
@@ -256,26 +253,24 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
 
 ### Standard
 
-#### Baseline
+**Baseline**
+- N-RICH compliant documentation such as selection policies MUST use one of the following file formats:
+  - PDF/A: Specifically, PDF/A-1 ([ISO 19005-1](https://www.iso.org/standard/38920.html)) or PDF/A-2 ([ISO 19005-2](https://www.iso.org/standard/50655.html))
+  - [UTF-8 plaintext](https://www.w3schools.com/charsets/ref_html_utf8.asp)
+  - [Markdown](https://www.markdownguide.org/)
+  - [TeX](https://en.wikipedia.org/wiki/TeX)
+- Metadata (whether Dubline Core, EDM or LinkedArt) should be published using one of the following Linked-Data file formats:
+  - RDF-XML
+  - JSON-LD
+- Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers. 
+- Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
+- Digitised objects should be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book. The   
 
-N-RICH compliant documentation such as selection policies MUST use one of the following file formats:
-- PDF/A: Specifically, PDF/A-1 ([ISO 19005-1](https://www.iso.org/standard/38920.html)) or PDF/A-2 ([ISO 19005-2](https://www.iso.org/standard/50655.html))
-- [UTF-8 plaintext](https://www.w3schools.com/charsets/ref_html_utf8.asp)
-- [Markdown](https://www.markdownguide.org/)
-- [TeX](https://en.wikipedia.org/wiki/TeX)
+**Extended**
+- Baseline requirements plus...
+- [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/) persistent identifers must be used since they have provision for resolver services that can handle movement of objects between providers, enabling persistent references in the longer term.
+- Metadata must be available for harvest via [OAI-PMH](https://www.openarchives.org/pmh/) which provides a mechanism for picking up just updated records, and collection-based filtering. 
 
-Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers. 
-
-Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
-
-Digitised objects should be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book. The   
-
-#### Extended
-
-[ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/) persistent identifers must be used since they have provision for resolver services that can handle movement of objects between providers, enabling persistent references in the longer term.
-
-Metadata must be available for harvest via [OAI-PMH](https://www.openarchives.org/pmh/) which provides a mechanism for picking up just updated records, and collection-based filtering. 
-
-#### Aspirational
-
-Collection holders should harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers, incorporating the additional information into their collection management or cataloguing systems.
+**Aspirational**
+- Extended requirements plus...
+- Collection holders should harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers and other third parties, incorporating the additional information into their collection management or cataloguing systems.
