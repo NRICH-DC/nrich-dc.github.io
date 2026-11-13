@@ -202,36 +202,27 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
 
 ### Standard
 
+**Documentaion**
 - N-RICH compliant documentation such as selection policies MUST use one of the following file formats:
   - PDF/A: Specifically, PDF/A-1 ([ISO 19005-1](https://www.iso.org/standard/38920.html)) or PDF/A-2 ([ISO 19005-2](https://www.iso.org/standard/50655.html))
   - [UTF-8 plaintext](https://www.w3schools.com/charsets/ref_html_utf8.asp)
   - [Markdown](https://www.markdownguide.org/)
   - [TeX](https://en.wikipedia.org/wiki/TeX)
+ 
+**Metadata**
+- Metadata (whether Dublin Core, EDM or LinkedArt) MUST be published using one of the following Linked-Data file formats:
+  - [RDF-XML](https://www.w3.org/TR/rdf12-xml/)
+  - [JSON-LD](https://json-ld.org/)
+- Metadata SHOULD be available for harvest via [OAI-PMH](https://www.openarchives.org/pmh/)
+- Collection holders can OPTIONALLY harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers and other third parties, incorporating the additional information into their collection management or cataloguing systems.
+- 
+**Images**
+- Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers.    - [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/) SHOULD be used since they have provision for resolver services that can handle movement of objects between providers.
+- Digitised images MUST be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
+- Digitised objects MUST be described online by a IIIF V2.1+ presentation API manifest.
+- When the URL to the IIIF manifest is invoked, it MUST return the manifest loaded into a IIIF viewer.
+- The URL to the IIIF manifest MUST be linked in the *references* element of the object metadata 
 
-### Persistent Identifiers
-
-Objects (both physical and digital) and their metadata MUST be referenceable and
-accessible via persistent identifiers. [ARK](https://arks.org/) or [DataCite
-DOI](https://datacite.org/) SHOULD be used since they have provision for
-resolver services that can handle movement of objects between providers,
-enabling persistent references in the longer term.
-
-### Image Access
-
-Digitised images MUST be made available via an [International Image
-Interoperability Framework](https://iiif.io) service. IIIF also provides access
-to a rich set of presentation tools for pubic and scholarly access. IIIF
-services can operate over both JPEG2000 and TIFF images, so are compatible with
-preservation recommendations.
-
-### Metadata Access API
-
-Metadata SHOULD be available for harvest via
-[OAI-PMH](https://www.openarchives.org/pmh/) which provides a mechanism for
-picking up just updated records, and collection-based filtering. Any additional
-metadata SHOULD also be made available in its native form via the same
-mechanism, signposted via *dc:*s*ource* or *dc:related* **links in the
-metadata.
 
     
 
