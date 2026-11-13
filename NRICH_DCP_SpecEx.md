@@ -94,10 +94,13 @@ The [CARE Principles](https://www.gida-global.org/careprinciples) outline specif
 
 **Collective Benefit** 
 - Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
+- 
 **Authority to Control**
 - Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
+
 **Responsibility**
 - Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
+
 **Ethics**
 - Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
 
