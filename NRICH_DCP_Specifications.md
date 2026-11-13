@@ -53,8 +53,8 @@ The specification identifies 3 levels of compliance which map to RFC 2119 termin
 | Level | Requirements |
 | ----- | ----- |
 | Baseline | The "minumum viable set". Elements identified by key words *MUST, MUST NOT* and *REQUIRED.* |
-| Extended  | Level 0 elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
-| Aspirational | Level 1 elements plus those identified by the key word *OPTIONAL.* |
+| Extended  | Baseline elements plus those identified by the key words *SHOULD*, *SHOULD NOT* and *RECOMMENDED.* |
+| Aspirational | Extended elements plus those identified by the key word *OPTIONAL.* |
 
 ## Selection
 
