@@ -105,12 +105,14 @@ Note that some fields specifically refer to attributes of the physical object b
 - It can be useful to see how metadata (catalogues) have changed when they are updated. Keeping historical metadata records and making them available online is OPTIONAL. 
 
 **Metadata about the Physical Object**
+
 | **DC**  | **Notes** | 
 | :--- | :--- |
 | dc:title<br>dc:description<br>dc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7))<br>dc:related (URL)<br>dc:creator<br>dc:contributor<br>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dcterms:provenance (URL) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for physical object<br><br>*created* is the creation date of the physical object<br><br>*provenance* links to accession policy and/or accession details |
 | dc:subject ([LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html))<br>dcterms:spatial ([ISO 6709](https://en.wikipedia.org/wiki/ISO_6709), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html))<br>dcterms:temporal ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dc:language* ([RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html)) | *subject* is OPTIONAL<br><br>**Maps MUST specify *spatial* coverage<br><br>Text bearing materials MUST specify *language* |
 
 **Metadata about Digital Object**
+
 | **DC**  | **Notes** |
 | :--- | :--- |
 | dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
