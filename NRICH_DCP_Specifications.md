@@ -215,7 +215,7 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
   - [JSON-LD](https://json-ld.org/)
 - Metadata SHOULD be available for harvest via [OAI-PMH](https://www.openarchives.org/pmh/)
 - Collection holders can OPTIONALLY harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers and other third parties, incorporating the additional information into their collection management or cataloguing systems.
-- 
+
 **Images**
 - Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers.    - [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/) SHOULD be used since they have provision for resolver services that can handle movement of objects between providers.
 - Digitised images MUST be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
