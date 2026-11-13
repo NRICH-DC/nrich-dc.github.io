@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document provides a verbal overview of the specifications. It includes 
+This document provides a discursive overview of the specifications. It includes 
 more explanatory details than the formal specification, providing the reasoning 
 behind decisions made in drafting the specifications.   
 
@@ -50,50 +50,56 @@ The specification identifies 3 levels of compliance:
 | Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
 | Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
 
-Conceptually, in terms of knowledge content, much of the meaning of an artefact is derived from information that is not intrinsic to the object itself. Its cultural significance instead comes largely from its original context, provenance, and interactions with people and culture over time. Correspondingly, a digital surrogate or born-digital object should be considered as a composite entity composed of multiple files that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding. The *aspirational* level recognises this, along with the fact the such information is not commonly generated as part of conventional collection management practice but rather from research or specific projects. Such information can be included in N-RICH by leveraging the event-based metadata capabilities of the Europeana Data Model or LinkArt standards. However, it would also be desirable for collection holders to be able to capture information from other sources (such as research conducted using N-RICH) to include in their metadata. The *aspirational* level thus also describes collections harvesting metadata back from N-RICH or other sources, recognising that this would require a significant changes in both institutional practice and catalogue/collection management systems.              
+Conceptually, in terms of knowledge content, much of the meaning of an artefact is derived from information that is not intrinsic to the object itself. Its cultural significance instead comes largely from its original context, provenance, and interactions with people and culture over time. Correspondingly, a digital surrogate or born-digital object should be considered as a composite entity composed of multiple files that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding. 
+
+The *aspirational* level recognises this, along with the fact the such information is not commonly generated as part of conventional collection management practice but rather from research or specific projects. Such information can be included in N-RICH by leveraging the event-based metadata capabilities of the Europeana Data Model or LinkArt standards. However, it would also be desirable for collection holders to be able to capture information from other sources (such as research conducted using N-RICH) to include in their metadata. The *aspirational* level thus also describes collections harvesting metadata back from N-RICH or other sources, recognising that this would require a significant changes in both institutional practice and catalogue/collection management systems.              
 
 ## FAIR Principles
 
 The [FAIR principles](https://www.go-fair.org/) encapsulate researchers’ broad requirements with respect to data and has been adopted by UKRI. The specification makes the following provisions to meet these requirements:
 
-- **Findable** – Metadata specifications will:
-  - Allow the construction of a discovery service what will allow a researcher to find the object that they require
-  - Provide enough detail about the identity of the object to enable a researcher its authenticity and suitability for their needs
-  - Be sufficiently generic to apply across the wide variety cultural heritage objects, so that no specific materials are privileged in terms of discovery  
+**Findable** – Metadata specifications will:
+- Allow the construction of a discovery service what will allow a researcher to find the object that they require
+- Provide enough detail about the identity of the object to enable a researcher its authenticity and suitability for their needs
+- Be sufficiently generic to apply across the wide variety cultural heritage objects, so that no specific materials are privileged in terms of discovery  
 
-- **Accessible** – The mechanisms for accessing both data (images) and metadata will:
-  - Be suitable for both human and machine consumption without undue technical or policy barriers
-  - Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
-    - Most importantly, metadata should be available under a license that is compliant with the policy   
-  - Provide a human- and machine-actionable mechanism to access more detailed information (e.g. collection specific metadata, source records etc.).
+**Accessible** – The mechanisms for accessing both data (images) and metadata will:
+- Be suitable for both human and machine consumption without undue technical or policy barriers
+- Be compliant with [UKRI Policy on Research Data](https://www.ukri.org/publications/uk-research-and-innovation-research-data-policy/ukri-research-data-policy/#section-responsibly-managing-and-sharing-data): "As open as possible, and as closed as necessary"
+  - Most importantly, metadata should be available under a license that is compliant with the policy   
+- Provide a human- and machine-actionable mechanism to access more detailed information (e.g. collection specific metadata, source records etc.).
 
-- **Interoperable** – This specification identifies the following standards for interoperability between collections:
-  - [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1+, level 1+ for machine access to 2D images
-    - IIIF is widely supported by both commercial and open-source image delivery platforms
-    - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
-    - IIIF supports complex objects such as books and newspapers, large objects displayed using tiled images such as maps and scrolls and alternate views to support features such as foldouts and two-page spreads
-    - IIIF integrates with a wide variety of research tools such as Optical Character Recognition (OCR), Handwritten Text Recognition (HTR), crowdsourcing platforms such as Zooniverse, Web Annotation (by humans and machines) and image analytics (AI or otherwise)
-  - [OAI-PMH](https://www.openarchives.org/pmh/) is a simple mechanism for publishing metadata for harvesting by other services (e.g. N-RICH infrastructure)
-  - Metadata requirements can be met using several formats
-    - [Dublin Core](https://www.dublincore.org/specifications/) is the simplest and most common metadata format but has limited expressiveness for information beyond the *baseline* requirements
-    - The [Europeana Data Model](https://pro.europeana.eu/index.php/page/edm-documentation) is already used by a number of collections and systems to feed metadata into Europeana. It has a stronger cultural heritage focus and therefore can accommodate *extended* or *aspirational* metadata.
-    - [LinkedART](https://linked.art/) is a subset of the [CIDOC-CRM](https://cidoc-crm.org/) developed by the [International Council of Museums](https://icom.museum/en/). While the CRM is very expansive and can be daunting to implementers, LinkedArt is rather simpler and aligns with the N-RICH infrastructure prototype requirements. It can also accommodate *extended* or *aspirational* metadata.
-    - A mapping is also provided for [SPECTRUM](https://collectionstrust.org.uk/spectrum/) since it used within many museum collection management systems, although not as a metadata format *per se*. 
-  - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) references are recommended for key entities such as people, groups, organisations, places and events. While Wikidata is not a canonical source for such entities, it links to many other resources and thus acts as a resolver for related entries these sources.     
+**Interoperable** – This specification identifies the following standards for interoperability between collections:
+- [International Image Interoperability Framework (IIIF)](https://iiif.io) Version 2.1+, level 1+ for machine access to 2D images
+  - IIIF is widely supported by both commercial and open-source image delivery platforms
+  - IIIF supports a wide variety of image viewers that support advanced features such as zoom, pan and annotation overlays
+  - IIIF supports complex objects such as books and newspapers, large objects displayed using tiled images such as maps and scrolls and alternate views to support features such as foldouts and two-page spreads
+  - IIIF integrates with a wide variety of research tools such as Optical Character Recognition (OCR), Handwritten Text Recognition (HTR), crowdsourcing platforms such as Zooniverse, Web Annotation (by humans and machines) and image analytics (AI or otherwise)
+- [OAI-PMH](https://www.openarchives.org/pmh/) is a simple mechanism for publishing metadata for harvesting by other services (e.g. N-RICH infrastructure)
+- Metadata requirements can be met using several formats
+  - [Dublin Core](https://www.dublincore.org/specifications/) is the simplest and most common metadata format but has limited expressiveness for information beyond the *baseline* requirements
+  - The [Europeana Data Model](https://pro.europeana.eu/index.php/page/edm-documentation) is already used by a number of collections and systems to feed metadata into Europeana. It has a stronger cultural heritage focus and therefore can accommodate *extended* or *aspirational* metadata.
+  - [LinkedART](https://linked.art/) is a subset of the [CIDOC-CRM](https://cidoc-crm.org/) developed by the [International Council of Museums](https://icom.museum/en/). While the CRM is very expansive and can be daunting to implementers, LinkedArt is rather simpler and aligns with the N-RICH infrastructure prototype requirements. It can also accommodate *extended* or *aspirational* metadata.
+  - A mapping is also provided for [SPECTRUM](https://collectionstrust.org.uk/spectrum/) since it used within many museum collection management systems, although not as a metadata format *per se*. 
+- [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) references are recommended for key entities such as people, groups, organisations, places and events. While Wikidata is not a canonical source for such entities, it links to many other resources and thus acts as a resolver for related entries these sources.     
 
-- **Reusable** – Data and metadata should available for researchers in the longer term for both new research and reproducibility purposes. The specification 
-  - To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) should be used for each item. The specification recommends using [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/).
-  - Digital materials (both data and metadata) should be archived using a service that is [CoreTrustSeal](https://www.coretrustseal.org/) certified to ensure continued availability.   
-  - As metadata can be updated over time, previous versions should also be archived supported to ensure referential integrity over the longer term. The OAI-PMH protocol allows for the publication of updates to previously harvested records.
+**Reusable** – Data and metadata should available for researchers in the longer term for both new research and reproducibility purposes. The specification makes the following provisions: 
+- To ensure that references and citations to research data continue to work, Persistent Identifiers (PIDs) must be used for each item. The specification recommends using [ARK](https://arks.org/) or [DataCite DOI](https://datacite.org/).
+- Digital materials (both data and metadata) should be archived using a service that is [CoreTrustSeal](https://www.coretrustseal.org/) certified to ensure continued availability.   
+- As metadata can be updated over time, previous versions should also be archived supported to ensure referential integrity over the longer term. The OAI-PMH protocol allows for the publication of updates to previously harvested records.
 
 ## CARE Principles
 
 The [CARE Principles](https://www.gida-global.org/careprinciples) outline specific considerations for the treatment of indigenous (and other culturally sensitive) materials. This may affect how both digital and physical materials are handled and made available and thus must be accounted for.
 
-- **Collective Benefit** Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
-- **Authority to Control** Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
-- **Responsibility** Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
-- **Ethics** Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
+**Collective Benefit** 
+- Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
+**Authority to Control**
+- Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
+**Responsibility**
+- Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self-determination and collective benefit. Accountability requires meaningful and openly available evidence of these efforts and the benefits accruing to Indigenous Peoples
+**Ethics**
+- Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.
 
 The CARE Principles come to the fore when making selection decisions and through the crafting of metadata that reflects indigenous concerns. When CARE considerations are a factor, these must be addressed in an object or collection level appraisal of the item and released as part of the object metadata. The use of Wikidata to map between indigenous and conventional representations of place, events and peoples can also be useful in this context.   
 
@@ -101,15 +107,11 @@ The CARE Principles come to the fore when making selection decisions and through
 
 ### Standard
 
-Transparency around how and why selection decisions have been made is essential so that the researchers and the public can understand gap between what is available digitally, and what actually exists (or exist*ed*). The specification identifies key three selection events about which documentary information can be required. These may be high level policies or, for specific projects or cases, more descriptive documents. Each may be published at an organisational, collection or item level.  
+Transparency around how and why selection decisions have been made is essential so that the researchers and the public can understand gap between what is available digitally, and what actually exists (or exist*ed*). The specification identifies key three selection events about which documentary information can be required. These may be high level policies or, for specific projects or cases, more descriptive documents. Accession polices are relatively common in the museum and archival communities since they are required for various certification processes. They are less ubiquitous in libraries. Each may be published at an organisational, collection or item level. Item level documentation is typically only required for special one-off acquisitions or similar special cases. 
 
 - **Accession** Document why and how collections and/or items are acquired
 - **Digitisation** Document why and how material is selected for digitisation
 - **Appraisal** Document why an item/collection is considered culturally significant, at risk and/or unique. This may include CARE considerations if applicable.  
-
-Item level documentation is typically only required for special one-off acquisitions or similar special cases.
-
-Accession polices are relatively common in the museum and archival communities since they are required for various certification processes. They are less ubiquitous in libraries. 
 
 **Baseline**
 - Organisational accession documentation (almost always a policy) must be published
@@ -187,6 +189,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 
 **Aspirational**
 - Extended requirements plus...
+- Previous version of metadata records should continue to be made available (although not necessarily in N-RICH), so researchers can understand how descriptions have changed over time
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
 - Events/activities must conform to the same requirements as other metadata:
   - Times/Dates should use [ISO8601](https://www.iso.org/standard/70908.html) with EDTF
@@ -260,8 +263,8 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
   - [Markdown](https://www.markdownguide.org/)
   - [TeX](https://en.wikipedia.org/wiki/TeX)
 - Metadata (whether Dubline Core, EDM or LinkedArt) should be published using one of the following Linked-Data file formats:
-  - RDF-XML
-  - JSON-LD
+  - [RDF-XML](https://www.w3.org/TR/rdf12-xml/)
+  - [JSON-LD](https://json-ld.org/)
 - Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers. 
 - Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
 - Digitised objects should be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book. The   
