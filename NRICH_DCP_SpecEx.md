@@ -94,7 +94,7 @@ The [CARE Principles](https://www.gida-global.org/careprinciples) outline specif
 
 **Collective Benefit** 
 - Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.
-- 
+
 **Authority to Control**
 - Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered. Indigenous data governance enables Indigenous Peoples and governing bodies to determine how Indigenous Peoples, as well as Indigenous lands, territories, resources, knowledges and geographical indicators, are represented and identified within data.
 
@@ -178,7 +178,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *license\**: license for the digitised object and its associated metadata record, which must be compliant with UKRI research data policy as described above
   - *rights holder*: name of the owner of the rights to the digitised object
   - *format*: description of file format of the digitised object
-  - *identifer\*: one or more persistent identifiers for the object, and any local identifiers  
+  - *identifer\**: one or more persistent identifiers for the object, and any local identifiers  
   - *publisher*: name of the organisation originally publishing the metadata record and digitised object
   - *issued*: date that the metadata record and digtised object were published
 
@@ -201,10 +201,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 - Extended requirements plus...
 - Previous version of metadata records should continue to be made available (although not necessarily in N-RICH), so researchers can understand how descriptions have changed over time
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
-- Events/activities must conform to the same requirements as other metadata:
-  - Times/Dates must use [ISO8601](https://www.iso.org/standard/70908.html) with EDTF
-  - Locations must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
-  - Agents must reference a recognised identity resource such as a Wikidata URL (as mentioned above) or an [ISNI](https://isni.org/) reference URL       
+- Event/activity details concerning people, organisations, places and time must conform to the same standards as other metadata.   
 
 ### Guidelines
 
@@ -272,12 +269,12 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
   - [UTF-8 plaintext](https://www.w3schools.com/charsets/ref_html_utf8.asp)
   - [Markdown](https://www.markdownguide.org/)
   - [TeX](https://en.wikipedia.org/wiki/TeX)
-- Metadata (whether Dublin Core, EDM or LinkedArt) should be published using one of the following Linked-Data file formats:
+- Metadata (whether Dublin Core, EDM or LinkedArt) must be published using one of the following Linked-Data file formats:
   - [RDF-XML](https://www.w3.org/TR/rdf12-xml/)
   - [JSON-LD](https://json-ld.org/)
-- Objects (both physical and digital) and their metadata MUST be referenceable and accessible via persistent identifiers. 
-- Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io) V2.1+ image service at compliance level 1 or greater. IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
-- Digitised objects should be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book. The   
+- Objects (both physical and digital) and their metadata must be referenceable and accessible via persistent identifiers. 
+- Digitised images must be made available via an [International Image Interoperability Framework](https://iiif.io). IIIF provides access to a rich set of presentation tools for public and scholarly access. IIIF services can operate over both JPEG2000 and TIFF images, so are compatible with preservation recommendations.
+- Digitised objects must be described online by a IIIF V2.1+ presentation API manifest. When the URL to a digital object is invoked, it should return the manifest loaded into a IIIF viewer, although the choice of viewer is up to the collection holder. The manifest describes how to display and navigate between the multiple images that may comprise a complex object such as a book.   
 
 **Extended**
 - Baseline requirements plus...
@@ -286,4 +283,4 @@ The [Digital Preservation Handbook](https://www.dpconline.org/handbook) is a goo
 
 **Aspirational**
 - Extended requirements plus...
-- Collection holders should harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers and other third parties, incorporating the additional information into their collection management or cataloguing systems.
+- Collection holders must harvest metadata back from the N-RICH Infrastructure via OAI-PMH to take advantage of enrichments made by researchers and other third parties, incorporating the additional information into their collection management or cataloguing systems.
