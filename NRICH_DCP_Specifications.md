@@ -30,11 +30,11 @@ as skills and technology evolve.
 
 - **Selection** is concerned with identifying objects as in-scope (i.e. cultural
 heritage), then making a series of evaluation and selection decisions: to
-determine whether they are accessioned into a physical collection, and
+determine whether they are accessioned into a collection, and
 subsequently, to determine priority for downstream actions such as conservation
 or digitisation. 
 - **Metadata** focuses on metadata creation to go alongside the digitised artefact.
-This includes descriptive information about the underlying physical artefect and
+This includes descriptive information about the underlying artefect and
 technical information but, also links to related objects and rights related
 information.
 - **Imaging** is largely a technical activity and thus amenable to setting and
@@ -95,7 +95,7 @@ are somewhat limited. This specification is based on [Dublin
 Core](https://www.dublincore.org/specifications/) Elements with some additions
 from the more specific DC Terms.
 
-Note that some fields specifically refer to attributes of the physical object being digitised which are inherited by the digital object, while others are unique to the digital object. This distinction does not apply to born-digital materials, of course. This specification avoids making a distinction between the physical object and more abstract bibliographic entities such as [Works and Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. Since the specification provides for linking to native metadata, this information can still be exposed and explored if required.
+Note that some fields specifically refer to attributes of the artefacts being digitised which are inherited by the digital assets, while others are unique to the digital assets. This distinction does not apply to born-digital materials, of course. This specification avoids making a distinction between the actual artefacts and more abstract bibliographic entities such as [Works and Manifestations](https://www.ifla.org/wp-content/uploads/2019/05/assets/cataloguing/frbr/frbr.pdf) which apply to specific types of material. Since the specification provides for linking to native metadata, this information can still be exposed and explored if required.
 
 ### Standard
 
@@ -104,33 +104,110 @@ Note that some fields specifically refer to attributes of the physical object b
 - If a [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) entry exists for a person, organisation or place it SHOULD be used in preference to other authoritative sources. While Wikidata is not the authoritative source for information on these entities itself, it links to multiple such sources and can be a valuable disambiguation tool.
 - It can be useful to see how metadata (catalogues) have changed when they are updated. Keeping historical metadata records and making them available online is OPTIONAL. 
 
-**Metadata about the Physical Object**
+**Metadata about the artefact**
 
 | **DC**  | **Notes** | 
 | :--- | :--- |
-| dc:title<br>dc:description<br>dc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7))<br>dc:creator<br>dc:contributor<br>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for physical object<br><br>*created* is the creation date of the physical object |
-| dc:subject ([LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html))<br>dcterms:spatial ([ISO 6709](https://en.wikipedia.org/wiki/ISO_6709), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html))<br>dcterms:temporal ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dc:language* ([RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html))<br>dcterms:provenance (URL) | *subject* is OPTIONAL<br><br>**Maps MUST specify *spatial* coverage<br><br>Text bearing materials MUST specify *language*<br><br>*provenance* links to selection documentation where it exists at an organisational or item level: accession details or appraisal |
+| dc:title<br>dc:description<br>dc:type ([DCMI Type Vocabulary](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#section-7))<br>dc:identifier<br>dc:creator<br>dc:contributor<br>dcterms:created ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*related* links to originators native metadata record(s) for artefact<br><br>*created* is the creation date of the artefact |
+| dc:subject ([LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html))<br>dcterms:spatial ([ISO 6709](https://en.wikipedia.org/wiki/ISO_6709), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html))<br>dcterms:temporal ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF)<br>dc:language* ([RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html))<br>dc:medium<br>dcterms:provenance (URL) | *subject* is OPTIONAL<br><br>**Maps MUST specify *spatial* coverage<br><br>Text bearing materials MUST specify *language*<br><br>*provenance* links to selection documentation where it exists at an organisational or item level: accession details or appraisal |
 
-**Metadata about Digital Object**
+**Metadata about digital asset**
 
 | **DC**  | **Notes** |
 | :--- | :--- |
 | dc:source (URL)<br>dcterms:references (IIIF URL)<br>dcterms:license<br>dcterms:rightsHolder (OrgID or ISNI)<br>dc:format ([MIME Type](http://www.iana.org/assignments/media-types/))<br>dc:identifier (PID, local identifiers)<br>dc:publisher ([ROR](https://ror.org/))<br>dcterms:issued ([ISO8601](https://www.iso.org/standard/70908.html) including EDTF) | These MUST always be present<br><br>*source* links to originators native metadata record(s) for digital object<br><br>*references* links to IIIF manifest of digital object<br><br>*issued* is the publication date of the digital resource |
 
 ### Mappings 
-**This section is work-in-progress**
-
 The Dublin Core fields can be mapped to equivalent fields in other interoperability standards. This specification allows for the use of the Europeana Data Model and LinkedArt as alternative publishing formats. These are more expressive models which can permit a more nuanced expression of object metadata (see OPTIONAL Event Metadata below). Whichever standards is chosen, they MUST be serialised as [RDF/XML](https://www.w3.org/TR/rdf-syntax-grammar/) or JSON-LD for harvesting.
 
-| **Dublin Core** | **Europeana** **Data Model** **(edm:WebResource)** | **LinkedArt** **(abbreviated)** | 
-| --- | --- | --- | 
-| dc:title | dc:title | identified_by:<br>  type: "Name" |
-| dc:description | dc:description |referred_to_by:<br>  type: "LinguisticObject",<br>  classified_as:<br>    type: "Type",<br>    _label: "Description", |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+
+**Spectrum mapping**
+| **Standard level** | **Metadata type** | **Dublin Core** | **Spectrum mapping** | **Notes** |
+| --- | --- | --- | --- | --- |
+| Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | [Title](https://collectionstrust.org.uk/resource/title/)<br> If no formal title, then:<br>[Object name](https://collectionstrust.org.uk/resource/object-name/)<br> - [Object name type](https://collectionstrust.org.uk/resource/object-name-type/)  | In Spectrum, Object name has a sub field of Object name type which should be used to denote if it is a simple name, specific or taxonomic name. |
+| Baseline | Artefact | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/identifier/) | [Object number](https://collectionstrust.org.uk/resource/object-number/) |  |
+| Baseline | Artefact | [description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/description/) | [Brief description](https://collectionstrust.org.uk/resource/brief-description/) |  |
+| Baseline | Artefact | [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) | [Object name](https://collectionstrust.org.uk/resource/object-name/)<br> - [Object name type](https://collectionstrust.org.uk/resource/object-name-type/) = object type | In Spectrum, Object name has a sub field of Object name type which should be used to denote if it is a simple name, specific or taxonomic name. For type, it should say ‘object type’. |
+| Baseline | Artefact | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/creator/) | [Object production person](https://collectionstrust.org.uk/resource/object-production-person/)<br>[Object production organisation](https://collectionstrust.org.uk/resource/object-production-organisation/)<br>[Object production people](https://collectionstrust.org.uk/resource/object-production-people/) | Spectrum breaks this down into people, organisation and person. There isn’t a generic creator. |
+| Baseline | Artefact | [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/contributor/) | [Associated person](https://collectionstrust.org.uk/resource/associated-person/)<br>[Associated organisation](https://collectionstrust.org.uk/resource/associated-organisation/)<br>[Associated people](https://collectionstrust.org.uk/resource/associated-people/)<br> - [Association type](https://collectionstrust.org.uk/resource/association-type/) | Spectrum breaks this down into people, organisation and person. There isn’t a generic creator.<br><br>Association type is used to define the type of association / contribution. |
+| Baseline | Artefact | [created](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/created/) | [Object production date](https://collectionstrust.org.uk/resource/object-production-date/) |  |
+| Baseline | Artefact | [provenance](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/) | [Object history note](https://collectionstrust.org.uk/resource/object-history-note/) |  |
+| Baseline | Digital asset | [source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/source/) | [Reproduction number](https://collectionstrust.org.uk/resource/reproduction-number/) | This doesn’t really exist in Spectrum. The closest would be Reproduction number, which would be a unique ID linked to the digital asset. However, that relates more directly to identifier below. So perhaps this is a gap? |
+| Baseline | Digital asset | [references](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/references/) | [Current reproduction location](https://collectionstrust.org.uk/resource/current-reproduction-location/) | Based on this being identified as the property that the IIIF manifest would be shared under. |
+| Baseline | Digital asset | [license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/license/) | [Rights out type](https://collectionstrust.org.uk/resource/rights-out-type/) |  |
+| Baseline | Digital asset | [rightsHolder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/rightsHolder/) | [Right holder – Person](https://collectionstrust.org.uk/resource/right-holder/)<br>[Right holder – Organisation](https://collectionstrust.org.uk/resource/right-holder/)<br>[Right holder - People](https://collectionstrust.org.uk/resource/right-holder/) |  |
+| Baseline | Digital asset | [format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/format/) | [Reproduction format](https://collectionstrust.org.uk/resource/reproduction-format/) |  |
+| Baseline | Digital asset | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/identifier/) | [Reproduction number](https://collectionstrust.org.uk/resource/reproduction-number/) |  |
+| Baseline | Digital asset | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | [Reproduction creator](https://collectionstrust.org.uk/resource/reproduction-creator/) |  |
+| Baseline | Digital asset | [issued](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/issued/) | [Reproduction date](https://collectionstrust.org.uk/resource/reproduction-date/) |  |
+| Extended | Artefact | [subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/subject/) | [Associated concept](https://collectionstrust.org.uk/resource/associated-concept/) | Spectrum does not have a generic subject or keyword. Associated concept is what Museum Data Service has used to record subjects and keywords in museum metadata. |
+| Extended | Artefact | [spatial](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/spatial/) | [Associated place](https://collectionstrust.org.uk/resource/associated-place/)<br> - [Association type](https://collectionstrust.org.uk/resource/association-type/) | Association type would be used to define the type of relationship to place. |
+| Extended | Artefact | [temporal](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/temporal/) | [Associated date](https://collectionstrust.org.uk/resource/associated-date/)<br> - [Association type](https://collectionstrust.org.uk/resource/association-type/) | Association type would be used to define the type of relationship to the date / period. |
+| Extended | Artefact | [language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/language/) | [Content - language](https://collectionstrust.org.uk/resource/content-language/) | This is quite specific for printed material, so doesn’t sit very clearly within Spectrum but it can be done via content-language. |
+| Extended | Artefact | [medium](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/medium/) | [Material](https://collectionstrust.org.uk/resource/material/) |  |
+
+**LinkedArt Mapping**
+| **Standard level** | **Metadata type** | **Dublin Core** | **Linked Art** **mapping** | **Notes** |
+| --- | --- | --- | --- | --- |
+| Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | Identified_by<br> - Type: “Name”<br> - Label: | The name or title of the artefact should be recorded under the label property |
+| Baseline | Artefact | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/identifier/) | Identified_by<br> - Type: “Identifier”<br> - Label: | The identifier is specified in the label property |
+| Baseline | Artefact | [description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/description/) | Referred_to_by<br> - Type: “LinguisticObject”<br>  - Classified_as<br>    - Type: "Description"<br> - Content:  | The description is recorded under the content property. |
+| Baseline | Artefact | [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) | Classified_as<br> - Type<br>  -Type_of_work |  |
+| Baseline | Artefact | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/creator/) | Produced_by<br>- Type: “Production”<br>- Carried_out_by |  |
+| Baseline | Artefact | [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/contributor/) | Produced_by<br>- Type:<br>   - Carried_out_by | The type specifies the contribution |
+| Baseline | Artefact | [created](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/created/) | Produced_by<br> - Timespan |  |
+| Baseline | Artefact | [provenance](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/) | Type: “Activity”<br>- Type: “Provenance Activity” | LinkedArt has quite a structured approach to provenance, so under the activity type, defined as provenance activity, there are a range of other properties relating to timespan, acquisition, transfer of title, payment etc. |
+| Baseline | Digital asset | [source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/source/) | Type: “DigitalObject”<br>  - Access_point<br>    - ID<br>    - Type: “Digital object” | ID would be where a URL would be added |
+| Baseline | Digital asset | [references](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/references/) | Subject_of<br> - Type: “LinguisticObject”<br> - Digitally_carried_by<br>  - Type: “DigitalObject”<br>  - Access_point<br>    - ID<br>    - Type: “Digital Object” | The ID is where the IIIF manifest would be added |
+| Baseline | Digital asset | [license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/license/) | Type: “VisualItem”<br> - Referred_to_by<br>  - Type: “LinguisticObject”<br>  - Classified_as<br>    - Label: Copyright/License Statement<br>  - Content: | Content would be used to specify the actual licence. |
+| Baseline | Digital asset | [rightsHolder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/rightsHolder/) | Type: “VisualItem”<br>- Subject_to<br>  - Type: “Right”<br>  - Classified_as<br>    - Label: [insert type of right]<br>  - Possessed_by<br>    - Label: [insert name of rights holder] | By using type of visual item, we are referring to a right of the visual, rather than the actual object.<br><br>The label of classified by specifies the type or right and the possessed by property allows you to give the name of the rights holder. |
+| Baseline | Digital asset | [format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/format/) | Type: “DigitalObject”<br>- format |  |
+| Baseline | Digital asset | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/identifier/) | Type: “DigitalObject”<br>- Identified_by<br>  - Type: “Identifier”<br>  - Content | The identifier will be recorded under content |
+| Baseline | Digital asset | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | Type: “DigitalObject”<br>- Created_by<br>- Type:<br> - Carried_out_by | Type could be ‘Creation’ or ‘Published’ with the person or organisation under ‘carried out by’. |
+| Baseline | Digital asset | [issued](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/issued/) | Type: “DigitalObject”<br>- Created_by<br>- Type: “Creation”<br>- Timespan |  |
+| Extended | Artefact | [subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/subject/) | Type: “VisualItem”<br>- About |  |
+| Extended | Artefact | [spatial](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/spatial/) | Produced_by<br>- Type:<br> - Took_place_at | Type can be used to define to relationship to the spatial |
+| Extended | Artefact | [temporal](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/temporal/) | Produced_by<br>- Type:<br> - timespan | Type can be used to define to relationship to the temporal |
+| Extended | Artefact | [language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/language/) | Type: “LinguisticObject”<br>- Classified_as<br>  - Language |  |
+| Extended | Artefact | [medium](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/medium/) | Made_of<br>- Type: “Material”<br>- Label: | The actual material is recorded in label |
+
+**Europeana Data Model Mapping**
+| **Standard level** | **Metadata type** | **Dublin Core** | **European** **Data** **Model** **mapping** | **Notes** |
+| --- | --- | --- | --- | --- |
+| Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | edm:ProvidedCHO<br>- dc:title |  |
+| Baseline | Artefact | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/elements11/identifier/) | edm:ProvidedCHO<br>- dc:identifier |  |
+| Baseline | Artefact | [description](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/description/) | edm:ProvidedCHO<br>- dc:description |  |
+| Baseline | Artefact | [type](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/type/) | edm:ProvidedCHO<br>- dc:type |  |
+| Baseline | Artefact | [creator](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/creator/) | edm:ProvidedCHO<br>- dc:creator |  |
+| Baseline | Artefact | [contributor](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/contributor/) | edm:ProvidedCHO<br>- dc:contributor |  |
+| Baseline | Artefact | [created](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/created/) | edm:ProvidedCHO<br>- dc:created |  |
+| Baseline | Artefact | [provenance](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/) | edm:ProvidedCHO<br>- dc:provenance |  |
+| Baseline | Digital asset | [source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/source/) | edm:WebResource<br>- dc:source | A URL |
+| Baseline | Digital asset | [references](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/references/) | edm:WebResource<br>- dcterms:isReferencedBy | Where a IIIF manifest would sit |
+| Baseline | Digital asset | [license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/license/) | edm:WebResource<br>- edm:rights | The EDM Rights  property is different to the dc:rights property below. The edm:rights property requires specific licences to be identified per digital asset / representation. |
+| Baseline | Digital asset | [rightsHolder](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/rightsHolder/) | edm:WebResource<br>- dc:rights | The dc:rights property can be used for more generic rights statements or to identify rights holders. |
+| Baseline | Digital asset | [format](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/format/) | edm:WebResource<br>- dc:format |  |
+| Baseline | Digital asset | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/identifier/) | edm:WebResource<br>- dc:identifer |  |
+| Baseline | Digital asset | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | edm:WebResource<br>- dc:publisher |  |
+| Baseline | Digital asset | [issued](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/issued/) | edm:WebResource<br>- dcterms:issued |  |
+| Extended | Artefact | [subject](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/subject/) | edm:ProvidedCHO<br>- dc:subject |  |
+| Extended | Artefact | [spatial](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/spatial/) | edm:ProvidedCHO<br>- dcterms:spatial |  |
+| Extended | Artefact | [temporal](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/temporal/) | edm:ProvidedCHO<br>- dcterms:temporal |  |
+| Extended | Artefact | [language](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/language/) | edm:ProvidedCHO<br>- dc:language |  |
+| Extended | Artefact | [medium](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/medium/) | edm:ProvidedCHO<br>- dc:format |  |
+
+Note: for the EDM to connect the artefact and digital asset metadata, an aggregation class is needed with the following set of propertie
+
+| **Metadata type** | **Dublin Core** | **EDM** | **Notes** |
+| --- | --- | --- | --- |
+| Extended | [identifier](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/identifier/) | ore:aggregatedCHO | This is the identifier of the artefact |
+| Extended | [source](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/source/) | edm:isShownBy | This would be the same URL or IIIF manifest represented in either edm:WebResource, dc:source (URL) or edm:WebResource, dcterms:isReferencedBy (specifically for IIIF).  |
+| Extended | [references](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/references/) | edm:hasView | IF there is more than one digital asset, this is used to represent secondary views. |
+| Extended | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | edm:dataProvider | The name of the data provider for the artefact. This doesn’t directly relate to the N-RICH data standard, but would be relevant if using the EDM as there would need to be an organisation ID on Europeana for any organisation using EDM. |
+| Extended | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | edm:provider | If there is a third party, ie the Museum Data Service, then their Europeana organisation ID is noted here. |
+| Extended | [license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/license/) | edm:rights |  |
+
+
 
 Other useful mappings have already been published elsewhere, although they are much more detailed than required by this specification. 
 - Europeana have published a [Mapping from MARC to EDM](https://pro.europeana.eu/files/Europeana_Professional/EuropeanaTech/EuropeanaTech_taskforces/Mapping_Refinement_Extension/Case_studies/Polymath/Mapping%20EDM%20explanations.doc).
