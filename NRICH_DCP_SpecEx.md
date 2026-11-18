@@ -188,7 +188,6 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *created*: must use [ISO8601](https://www.iso.org/standard/70908.html) standard date format but can use Extended Date-Time Format (EDTF) to express uncertainty
   - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
   - *language\**: must use one of [RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html) language identifers
-  - *subject\**: one or more keywords that help describe the object
   - *provenance\**: URL link to selection documentation, this may include accession details and appraisal documentation. 
 - Required metadata about the Digital Object
   -  *rights holder*: as with *creator*
@@ -198,6 +197,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 
 **Aspirational**
 - Extended requirements plus...
+- *subject\**: One or more items drawn from a controlled vocabulary such as [LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html) which describes what the object is about
 - Previous version of metadata records should continue to be made available (although not necessarily in N-RICH), so researchers can understand how descriptions have changed over time
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
 - Event/activity details concerning people, organisations, places and time must conform to the same standards as other metadata.   
