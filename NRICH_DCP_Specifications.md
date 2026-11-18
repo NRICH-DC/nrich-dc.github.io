@@ -122,6 +122,7 @@ The Dublin Core fields can be mapped to equivalent fields in other interoperabi
 
 
 **Spectrum mapping**
+
 | **Standard level** | **Metadata type** | **Dublin Core** | **Spectrum mapping** | **Notes** |
 | --- | --- | --- | --- | --- |
 | Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | [Title](https://collectionstrust.org.uk/resource/title/)<br> If no formal title, then:<br>[Object name](https://collectionstrust.org.uk/resource/object-name/)<br> - [Object name type](https://collectionstrust.org.uk/resource/object-name-type/)  | In Spectrum, Object name has a sub field of Object name type which should be used to denote if it is a simple name, specific or taxonomic name. |
@@ -147,6 +148,7 @@ The Dublin Core fields can be mapped to equivalent fields in other interoperabi
 | Extended | Artefact | [medium](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/medium/) | [Material](https://collectionstrust.org.uk/resource/material/) |  |
 
 **LinkedArt Mapping**
+
 | **Standard level** | **Metadata type** | **Dublin Core** | **Linked Art** **mapping** | **Notes** |
 | --- | --- | --- | --- | --- |
 | Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | Identified_by<br> - Type: “Name”<br> - Label: | The name or title of the artefact should be recorded under the label property |
@@ -172,6 +174,7 @@ The Dublin Core fields can be mapped to equivalent fields in other interoperabi
 | Extended | Artefact | [medium](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/medium/) | Made_of<br>- Type: “Material”<br>- Label: | The actual material is recorded in label |
 
 **Europeana Data Model Mapping**
+
 | **Standard level** | **Metadata type** | **Dublin Core** | **European** **Data** **Model** **mapping** | **Notes** |
 | --- | --- | --- | --- | --- |
 | Baseline | Artefact | [title](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/title/) | edm:ProvidedCHO<br>- dc:title |  |
@@ -207,7 +210,7 @@ Note: for the EDM to connect the artefact and digital asset metadata, an aggrega
 | Extended | [publisher](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/publisher/) | edm:provider | If there is a third party, ie the Museum Data Service, then their Europeana organisation ID is noted here. |
 | Extended | [license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/license/) | edm:rights |  |
 
-
+**Other Mappings**
 
 Other useful mappings have already been published elsewhere, although they are much more detailed than required by this specification. 
 - Europeana have published a [Mapping from MARC to EDM](https://pro.europeana.eu/files/Europeana_Professional/EuropeanaTech/EuropeanaTech_taskforces/Mapping_Refinement_Extension/Case_studies/Polymath/Mapping%20EDM%20explanations.doc).
