@@ -54,7 +54,7 @@ are needed by N-RICH.
 
 ## Further Development
 
-Resource and time constrains mean that this specification cannot and does not 
+Resource and time constraints mean that this specification cannot and does not 
 cover the rich diversity of cultural heritage materials and metadata, focusing 
 as it does on 2D imaging. However, the specifications have been drafted with 
 these additional cases in mind and it is hoped that they will prove to be 

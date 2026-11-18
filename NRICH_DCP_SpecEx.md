@@ -46,8 +46,8 @@ The specification identifies 3 levels of compliance:
 
 | Level | Description |
 | ----- | ----- |
-| Baseline | Describes to "minimum viable set". These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
-| Extended | These requirements will improve the utility of collections included in N-RICH but many collections may require further work to achieve the required metadata detail. |
+| Baseline | Describes the "minimum viable set", focused on ensuring the presence of certain types of information. These requirements must be met in order for collections to be included in N-RICH Infrastructure. This is expected to be within reach for all collections although correct data formatting and machine accessibility may require the use of external services. |
+| Extended | These requirements will improve the utility of collections included in N-RICH by enforcing the use of standardised formats, controlled vocabularies and reference sources. Many collections may require further work to achieve the required metadata detail. |
 | Aspirational | These requirements encompass information that is not habitually recorded in the sector, but may be generated as an outcome of research activities or specific projects. Ingesting this additional information into catalogues and collection management systems would make it available **at source**. This would greatly enhance the basic discoverability and comprehensibility of cultural heritage materials, as well as increasing opportunities for advanced machine analytics. |
 
 Conceptually, in terms of knowledge content, much of the meaning of an artefact is derived from information that is not intrinsic to the object itself. Its cultural significance instead comes largely from its original context, provenance, and interactions with people and culture over time. Correspondingly, a digital surrogate or born-digital object should be considered as a composite entity composed of multiple files that can be labelled as data, metadata, documentation or paradata but all of which contribute to overall meaning and understanding. 
@@ -164,12 +164,10 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 - Required metadata about the Physical Object
   - *title*: Short text identifying the object as uniquely as possible 
   - *description*: Longer more descriptive text
-  - *type*: an indication of the type of physical object being described (e.g. statue)
-  - *related\**: URL link(s) to the native metadata record(s) for the physical object, if they exist, May also link to appraisal documentation if it exists. 
+  - *type*: an indication of the type of physical object being described (e.g. statue), may include material or medium information
   - *creator\**: name of person, group or organisation who created the object ("anonymous" or "unknown" are acceptable values)
   - *contributor\**: name of person, group or organisation who contributed indirectly to the creation of the object. May be omitted if not relevant. 
   - *created*: the date that the object was created, expressing any uncertainty 
-  - *provenance*: URL link to accession documentation
   - *spatial coverage*: geographical area to which the object refers (only required for maps or similar objects) 
   - *language\**: languages and/or scripts used (only required for text-bearing objects) 
 - Required metadata about the Digital Object
@@ -190,7 +188,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *created*: must use [ISO8601](https://www.iso.org/standard/70908.html) standard date format but can use Extended Date-Time Format (EDTF) to express uncertainty
   - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
   - *language\**: must use one of [RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html) language identifers
-  - *subject\**: one or more keywords that help describe the object
+  - *provenance\**: URL link to selection documentation, this may include accession details and appraisal documentation. 
 - Required metadata about the Digital Object
   -  *rights holder*: as with *creator*
   -  *format*: must use [MIME Type](http://www.iana.org/assignments/media-types/)
@@ -199,6 +197,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 
 **Aspirational**
 - Extended requirements plus...
+- *subject\**: One or more items drawn from a controlled vocabulary such as [LCSH](https://www.loc.gov/aba/publications/FreeLCSH/freelcsh.html) which describes what the object is about
 - Previous version of metadata records should continue to be made available (although not necessarily in N-RICH), so researchers can understand how descriptions have changed over time
 - Rich contextual and provenance metadata. Both EDM and LinkedArt support an event based approach to metadata (LinkedArt uses the term "Activity"). An event is typically located at a particular time and place, involves one or more agents (the people, places, organisations involved in the event) and results in a change to the object involved. The change may be terms of meaning, understanding or cultural relevance as much as anything physical. This mechanism allows the capture of complex narratives around digital objects.
 - Event/activity details concerning people, organisations, places and time must conform to the same standards as other metadata.   
