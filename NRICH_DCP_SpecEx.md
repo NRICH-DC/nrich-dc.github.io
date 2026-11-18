@@ -164,12 +164,10 @@ Items marked with an asterisk may occur more than once in a metadata record. The
 - Required metadata about the Physical Object
   - *title*: Short text identifying the object as uniquely as possible 
   - *description*: Longer more descriptive text
-  - *type*: an indication of the type of physical object being described (e.g. statue)
-  - *related\**: URL link(s) to the native metadata record(s) for the physical object, if they exist, May also link to appraisal documentation if it exists. 
+  - *type*: an indication of the type of physical object being described (e.g. statue), may include material or medium information
   - *creator\**: name of person, group or organisation who created the object ("anonymous" or "unknown" are acceptable values)
   - *contributor\**: name of person, group or organisation who contributed indirectly to the creation of the object. May be omitted if not relevant. 
   - *created*: the date that the object was created, expressing any uncertainty 
-  - *provenance*: URL link to accession documentation
   - *spatial coverage*: geographical area to which the object refers (only required for maps or similar objects) 
   - *language\**: languages and/or scripts used (only required for text-bearing objects) 
 - Required metadata about the Digital Object
@@ -191,6 +189,7 @@ Items marked with an asterisk may occur more than once in a metadata record. The
   - *spatial coverage*: must use one of [ISO 6709](https://en.wikipedia.org/wiki/ISO_6709) (geospatial coordinates), [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) (country codes), a [GeoNames](https://www.geonames.org/) URL or a Wikidata URL referencing for a geopolitical entity.
   - *language\**: must use one of [RFC3066](http://www.ietf.org/rfc/rfc3066.txt)/[ISO 639](http://www.oasis-open.org/cover/iso639a.html) language identifers
   - *subject\**: one or more keywords that help describe the object
+  - *provenance\**: URL link to selection documentation, this may include accession details and appraisal documentation. 
 - Required metadata about the Digital Object
   -  *rights holder*: as with *creator*
   -  *format*: must use [MIME Type](http://www.iana.org/assignments/media-types/)
